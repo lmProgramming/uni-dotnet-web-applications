@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML2</title>
+</head>
+<body>
+    <!-- 
+    Lista zadań 
+    
+    1. Stworzyć stronę HTML5 z podanymi elementami i ich możliwościami : 
+    a. 5 znaków specjalnych 
+    b. 5 rodzajów formatowanie tekstu (typu <strong> itd.) 
+    c. Listy uporządkowane 
+    d. Listy nieuporządkowane 
+    e. Lista definicji 
+    f. Listy zagnieżdżone (co najmniej 4 poziomy, minimum 2-3 elementy na każdym 
+    poziomie, minimum 10 elementów sumarycznie) 
+    g. Tabele minimum 5x5 z ciekawym wykorzystaniem łączenia komórek,  z wierszami 
+    nagłówka i stopki 
+    h. Formularz z wykorzystaniem co najmniej 10 różnymi typami pól (nie licząc submit i 
+    reset) 
+    i. Zastosować linkowanie wewnętrzne (do tabeli, list, formularza, do początku strony). 
+    Tak dopisać tekst w akapitach, żeby był widoczny efekt takiego linku. 
+    j. Zastosować 4 elementy meta nie wygenerowane automatycznie przez VS Code. 
+    k. Wykorzystać minimum 3 nowe elementy struktury strony (typu <section> itp.) 
+    -->
+    <header>
+        <h1>HTML5 Elements Showcase</h1>
+    </header>
+
+    <section id="special-characters">
+        <h2>Special Characters</h2>
+        <p>Here are some special characters: &lt;, &amp;, &copy;, &phone;, &euro;</p>
+    </section>
+
+    <section id="text-formatting">
+        <h2>Text Formatting</h2>
+        <p><strong>Strong text</strong></p>
+        <p><em>Emphasized text</em></p>
+        <p><mark>Marked text</mark></p>
+        <p><del>Deleted text</del></p>
+        <p><ins>Inserted text</ins></p>
+    </section>
+
+    <section id="lists">
+        <h2>Lists</h2>
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>Dog</li>
+            <li>Cat</li>
+            <li>Turtle</li>
+        </ul>
+
+        <h3>Definition List</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+
+        <h3>Nested Lists</h3>
+        <ul>
+            <li>Level 1
+                <ul>
+                    <li>Level 2
+                        <ul>
+                            <li>Level 3
+                                <ul>
+                                    <li>Level 4</li>
+                                    <li>Level 4</li>
+                                </ul>
+                            </li>
+                            <li>Level 3</li>
+                        </ul>
+                    </li>
+                    <li>Level 2</li>
+                </ul>
+            </li>
+            <li>Level 1</li>
+        </ul>
+    </section>
+
+    <section id="table">
+        <h2>Table</h2>
+        <table>
+            <caption>Beatiful Table</caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                    <th>Header 5</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                    <td>Footer 4</td>
+                    <td>Footer 5</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Rowspan 2</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 2</td>
+                    <td colspan="3">Colspan 3</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Form</h2>
+        <form>
+            <label for="text">Text:</label>
+            <input type="text" id="text" name="text"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="number">Number:</label>
+            <input type="number" id="number" name="number"><br><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+            <label for="range">Range:</label>
+            <input type="range" id="range" name="range"><br><br>
+            <label for="file">File:</label>
+            <input type="file" id="file" name="file"><br><br>
+            <label for="checkbox">Checkbox:</label>
+            <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+            <label for="radio">Radio:</label>
+            <input type="radio" id="radio" name="radio"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#special-characters">Special Characters</a></li>
+            <li><a href="#text-formatting">Text Formatting</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#top">Back to Top</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Showcase</p>
+    </footer>    
+</body>
+</html>
