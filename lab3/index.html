@@ -1,36 +1,21 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Witryna</title>
+    <title>Document</title>
+    <!-- Load font awesome icons -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Point 1: Embedded CSS */
-        body {
-            font-family: Arial, sans-serif;
-        }
-    </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Strona Główna</a></li>
-                <li><a href="text.html">Tekst</a></li>
-                <li><a href="background.html">Tło</a></li>
-                <li><a href="selectors.html">Selektory</a></li>
-                <li><a href="boxmodel.html">Box Model</a></li>
-                <li><a href="table.html">Tabela</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Witamy na naszej witrynie!</h1>
-        <p>Zapraszamy do zapoznania się z różnymi przykładami CSS.</p>
-    </main>
+    <!-- Include the navbar -->
+    <div w3-include-html="navbar.html"></div>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>

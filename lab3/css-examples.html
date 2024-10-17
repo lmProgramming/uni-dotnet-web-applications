@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Różne możliwości osadzania reguł CSS</h1>
+
+    <!-- Inline CSS -->
+    <p style="color: blue; font-size: 20px;">To jest akapit z osadzonym CSS w linii.</p>
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-css {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+    <p class="internal-css">To jest akapit z osadzonym CSS wewnętrznym.</p>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <p class="external-css">To jest akapit z osadzonym CSS zewnętrznym.</p>
+</body>
+
+</html>

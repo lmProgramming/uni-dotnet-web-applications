@@ -1,3 +1,77 @@
+/* The navigation menu */
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+}
+
+/* Navigation links */
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+	float: left;
+	overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+	background-color: red;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+	display: none;
+	position: absolute;
+	left: 0;
+	background-color: red;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+	float: left;
+	color: white;
+	text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+	background-color: #eee;
+	color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+	display: block;
+}
+
+.external-css {
+	background-color: #f1f1f1;
+	padding: 20px;
+	margin-top: 15px;
+}
+
 /* Point 2: Text size */
 h1 {
     font-size: 2em;
@@ -6,145 +80,8 @@ p {
     font-size: 16px;
 }
 .small-text {
-    font-size: 12pt;
+    font-size: 8pt;
 }
 .large-text {
     font-size: 150%;
-}
-
-/* Point 3: Background */
-body {
-    background-image: url('background.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-/* Point 4: Selectors */
-#unique {
-    color: red;
-}
-.classname {
-    color: blue;
-}
-div > p {
-    color: green;
-}
-div p {
-    color: purple;
-}
-
-/* Point 5: Box Model and Positioning */
-.box {
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-    position: relative;
-}
-.absolute {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-.relative {
-    position: relative;
-    top: 10px;
-    left: 10px;
-}
-.fixed {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-.float {
-    float: left;
-}
-
-/* Point 6: Text Formatting */
-.bold-text {
-    font-weight: bold;
-}
-.italic-text {
-    font-style: italic;
-}
-.line-height {
-    line-height: 1.5;
-}
-
-/* Point 7: Border */
-.border-example {
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-}
-
-/* Point 8: Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #f2f2f2;
-}
-
-/* Point 9: Pseudo-classes and Pseudo-elements */
-a:hover {
-    color: orange;
-}
-a:visited {
-    color: gray;
-}
-::before {
-    content: "Prefix: ";
-}
-::after {
-    content: " Suffix";
-}
-
-/* Point 10: Dropdown Menu */
-.menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-}
-.menu li {
-    position: relative;
-    display: inline-block;
-}
-.menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.menu li a:hover {
-    background-color: #111;
-}
-.menu li ul {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-}
-.menu li:hover ul {
-    display: block;
-}
-.menu li ul li {
-    display: block;
-}
-.menu li ul li a {
-    padding: 12px 16px;
-}
-.menu li ul li a:hover {
-    background-color: #575757;
 }
