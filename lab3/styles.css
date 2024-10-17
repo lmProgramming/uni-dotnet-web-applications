@@ -138,3 +138,10 @@ div > p {
 .line-height {
     line-height: 1.5;
 }
+
+/* Point 7: Border */
+.border-example {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
