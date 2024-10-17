@@ -1,38 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mikołaj Kubś">
+    <meta name="description" content="A showcase of HTML5 elements and their capabilities.">
+    <meta name="keywords"
+        content="HTML5, showcase, elements, special characters, text formatting, lists, tables, forms">
+    <meta name="robots" content="index, follow">
     <title>HTML2</title>
 </head>
+
 <body>
-    <!-- 
-    Lista zadań 
-    
-    1. Stworzyć stronę HTML5 z podanymi elementami i ich możliwościami : 
-    a. 5 znaków specjalnych 
-    b. 5 rodzajów formatowanie tekstu (typu <strong> itd.) 
-    c. Listy uporządkowane 
-    d. Listy nieuporządkowane 
-    e. Lista definicji 
-    f. Listy zagnieżdżone (co najmniej 4 poziomy, minimum 2-3 elementy na każdym 
-    poziomie, minimum 10 elementów sumarycznie) 
-    g. Tabele minimum 5x5 z ciekawym wykorzystaniem łączenia komórek,  z wierszami 
-    nagłówka i stopki 
-    h. Formularz z wykorzystaniem co najmniej 10 różnymi typami pól (nie licząc submit i 
-    reset) 
-    i. Zastosować linkowanie wewnętrzne (do tabeli, list, formularza, do początku strony). 
-    Tak dopisać tekst w akapitach, żeby był widoczny efekt takiego linku. 
-    j. Zastosować 4 elementy meta nie wygenerowane automatycznie przez VS Code. 
-    k. Wykorzystać minimum 3 nowe elementy struktury strony (typu <section> itp.) 
-    -->
     <header>
         <h1>HTML5 Elements Showcase</h1>
     </header>
 
     <section id="special-characters">
         <h2>Special Characters</h2>
-        <p>Here are some special characters: &lt;, &amp;, &copy;, &phone;, &euro;</p>
+        <p>Here are some special characters: &lt;, &amp;, &copy;, &phone;, &euro;. That was inside a &lt;p&gt;!</p>
     </section>
 
     <section id="text-formatting">
@@ -73,7 +67,7 @@
             <li>Level 1
                 <ul>
                     <li>Level 2
-                        <ul>
+                        <ol type="i">
                             <li>Level 3
                                 <ul>
                                     <li>Level 4</li>
@@ -81,7 +75,7 @@
                                 </ul>
                             </li>
                             <li>Level 3</li>
-                        </ul>
+                        </ol>
                     </li>
                     <li>Level 2</li>
                 </ul>
@@ -103,15 +97,6 @@
                     <th>Header 5</th>
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <td>Footer 1</td>
-                    <td>Footer 2</td>
-                    <td>Footer 3</td>
-                    <td>Footer 4</td>
-                    <td>Footer 5</td>
-                </tr>
-            </tfoot>
             <tbody>
                 <tr>
                     <td rowspan="2">Rowspan 2</td>
@@ -132,18 +117,64 @@
                     <td>Cell 5</td>
                 </tr>
                 <tr>
-                    <td>Cell 1</td>
-                    <td>Cell 2</td>
+                    <td rowspan="2" colspan="2">Wide and tall</td>
                     <td>Cell 3</td>
                     <td>Cell 4</td>
                     <td>Cell 5</td>
                 </tr>
                 <tr>
-                    <td>Cell 1</td>
-                    <td>Cell 2</td>
                     <td>Cell 3</td>
                     <td>Cell 4</td>
                     <td>Cell 5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                    <td>Footer 4</td>
+                    <td>Footer 5</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+
+    <br><br>
+    <section id="modification-table">
+        <table>
+            <caption>Modification Table</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">&lt;&gt;</th>
+                    <th colspan="3">TITLE</th>
+                    <th>A</th>
+                </tr>
+                <tr>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>F</td>
+                    <td>G</td>
+                    <td rowspan="2" colspan="3">
+                        <img src="car.png" alt="Image of a car" width="200" height="100">
+                    </td>
+                </tr>
+                <tr>
+                    <td>H</td>
+                    <td>I</td>
+                </tr>
+                <tr>
+                    <td>J</td>
+                    <td>K</td>
+                    <td>L</td>
+                    <td colspan="2"><a href="https://www.google.com/">Link do google.com</a></td>
                 </tr>
             </tbody>
         </table>
@@ -151,15 +182,17 @@
 
     <section id="form">
         <h2>Form</h2>
-        <form>
+        <form method="post">
             <label for="text">Text:</label>
             <input type="text" id="text" name="text"><br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email"><br><br>
-            <label for="number">Number:</label>
-            <input type="number" id="number" name="number"><br><br>
+            <label for="textarea">Textarea:</label><br>
+            <textarea name="textarea" id="textarea" cols="30" rows="10">Write your experiences</textarea><br><br>
+            <label for="number">Some number:</label>
+            <input type="number" id="number" name="number" value="2024"><br><br>
             <label for="date">Date:</label>
             <input type="date" id="date" name="date"><br><br>
             <label for="color">Color:</label>
@@ -168,10 +201,25 @@
             <input type="range" id="range" name="range"><br><br>
             <label for="file">File:</label>
             <input type="file" id="file" name="file"><br><br>
-            <label for="checkbox">Checkbox:</label>
-            <input type="checkbox" id="checkbox" name="checkbox"><br><br>
-            <label for="radio">Radio:</label>
-            <input type="radio" id="radio" name="radio"><br><br>
+            <label>Checkbox:
+                <input type="checkbox" id="checkbox1" name="checkbox" checked>
+                <input type="checkbox" id="checkbox2" name="checkbox">
+                <input type="checkbox" id="checkbox3" name="checkbox" checked><br><br>
+            </label>
+            <label>Radio:
+                <input type="radio" id="radio1" name="radio">
+                <input type="radio" id="radio2" name="radio">
+                <input type="radio" id="radio3" name="radio" checked>
+            </label><br><br>
+            <label>How would you rate this form?
+                <select name="rating" id="rating">
+                    <option value="1">1&starf;;</option>
+                    <option value="2">2&starf;</option>
+                    <option value="3">3&starf;</option>
+                    <option value="4">4&starf;</option>
+                    <option value="5">5&starf;</option>
+                </select>
+            </label><br><br>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
@@ -190,6 +238,7 @@
 
     <footer>
         <p>&copy; 2023 HTML5 Showcase</p>
-    </footer>    
+    </footer>
 </body>
+
 </html>
