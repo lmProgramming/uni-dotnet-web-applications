@@ -62,19 +62,7 @@ body {
     background-size: cover;
 }
 
-/* Point 4: Selectors */
-#unique {
-    color: red;
-}
-.classname {
-    color: blue;
-}
-div > p {
-    color: green;
-}
-div p {
-    color: purple;
-}
+
 
 /* Point 5: Box Model and Positioning */
 .box {

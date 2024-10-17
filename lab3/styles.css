@@ -85,3 +85,17 @@ p {
 .large-text {
     font-size: 150%;
 }
+
+/* Point 4: Selectors */
+#unique {
+    color: red;
+}
+.classname {
+    color: blue;
+}
+div p {
+    color: purple;
+}
+div > p {
+    color: green;
+}
