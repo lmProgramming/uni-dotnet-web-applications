@@ -9,24 +9,20 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Strona Główna</a></li>
-                <li><a href="text.html">Tekst</a></li>
-                <li><a href="background.html">Tło</a></li>
-                <li><a href="selectors.html">Selektory</a></li>
-                <li><a href="boxmodel.html">Box Model</a></li>
-                <li><a href="table.html">Tabela</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include the navbar -->
+    <div w3-include-html="navbar.html"></div>
+
     <main>
         <h1>Przykłady Tekstu (2em)</h1>
         <p class="small-text">To jest mały tekst (8pt).</p>
         <p>To jest normalny tekst (16px).</p>
         <p class="large-text">To jest duży tekst (150%).</p>
     </main>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>

@@ -9,18 +9,8 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Strona Główna</a></li>
-                <li><a href="text.html">Tekst</a></li>
-                <li><a href="background.html">Tło</a></li>
-                <li><a href="selectors.html">Selektory</a></li>
-                <li><a href="boxmodel.html">Box Model</a></li>
-                <li><a href="table.html">Tabela</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div w3-include-html="navbar.html"></div>
+
     <main>
         <h1>Przykłady Box Model</h1>
         <div class="box">To jest box z marginesem, paddingiem i obramowaniem.</div>
@@ -29,6 +19,11 @@
         <div class="box fixed">To jest box z pozycją stałą.</div>
         <div class="box float">To jest box z float.</div>
     </main>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>

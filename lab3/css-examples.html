@@ -8,23 +8,32 @@
 </head>
 
 <body>
+    <div w3-include-html="navbar.html"></div>
+
     <h1>Różne możliwości osadzania reguł CSS</h1>
 
-    <!-- Inline CSS -->
-    <p style="color: blue; font-size: 20px;">To jest akapit z osadzonym CSS w linii.</p>
+    <main>
+        <!-- Inline CSS -->
+        <p style="color: blue; font-size: 20px;">To jest akapit z osadzonym CSS w linii.</p>
 
-    <!-- Internal CSS -->
-    <style>
-        .internal-css {
-            color: green;
-            font-size: 18px;
-        }
-    </style>
-    <p class="internal-css">To jest akapit z osadzonym CSS wewnętrznym.</p>
+        <!-- Internal CSS -->
+        <style>
+            .internal-css {
+                color: green;
+                font-size: 18px;
+            }
+        </style>
+        <p class="internal-css">To jest akapit z osadzonym CSS wewnętrznym.</p>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <p class="external-css">To jest akapit z osadzonym CSS zewnętrznym.</p>
+        <!-- External CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <p class="external-css">To jest akapit z osadzonym CSS zewnętrznym.</p>
+    </main>
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>
