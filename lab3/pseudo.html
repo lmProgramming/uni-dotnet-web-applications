@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selektory</title>
+    <title>Pseudo</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pseudo.css">
 </head>
 
 <body>
     <div w3-include-html="navbar.html"></div>
 
     <main>
-        <h1>Selector examples</h1>
-        <p id="unique">Text with id.</p>
-        <p class="classname">Text with class.</p>
+        <h1>Pseudo</h1>
+        <h2>Classes</h2>
         <div>
-            <p class="selector">Paragraph as 1st child of div.</p>
-            <section>
-                <p class="selector">Paragraph as n-th (excluding n=1) child of div.</p>
-            </section>
+            <input type="text" class="pseudo" placeholder="This is a placeholder. Click me!">
+            <p class="pseudo">This is a paragraph. It's the last child.</p>
+        </div>
+        <h2>Elements</h2>
+        <div>
+            <p class="pseudo-element">Some text.</p>
         </div>
     </main>
 

@@ -93,10 +93,10 @@ p {
 .classname {
     color: blue;
 }
-div p {
+div .selector {
     color: purple;
 }
-div > p {
+div > .selector {
     color: green;
 }
 

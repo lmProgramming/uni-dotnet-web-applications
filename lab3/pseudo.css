@@ -1,0 +1,27 @@
+.pseudo:last-child {
+    background-color: #0040ff;
+}
+
+.pseudo:focus {
+    background-color: #ff0000;
+}
+
+.pseudo-element::before {
+    content: "Pseudo-element before!";
+    color: #ffffff;
+    background-color: #3b0037;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
+
+.pseudo-element::after {
+    content: "Pseudo-element after!";
+    color: #ffffff;
+    background-color: #710000;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+}
