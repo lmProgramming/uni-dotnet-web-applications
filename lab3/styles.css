@@ -127,3 +127,14 @@ div > p {
 .float {
     float: left;
 }
+
+/* Point 6: Text Formatting */
+.bold-text {
+    font-weight: bold;
+}
+.italic-text {
+    font-style: italic;
+}
+.line-height {
+    line-height: 1.5;
+}

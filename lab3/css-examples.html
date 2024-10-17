@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Embedding CSS</title>
 </head>
 
 <body>
     <div w3-include-html="navbar.html"></div>
 
-    <h1>Różne możliwości osadzania reguł CSS</h1>
+    <h1>Different Ways to Embed CSS Rules</h1>
 
     <main>
         <!-- Inline CSS -->
-        <p style="color: blue; font-size: 20px;">To jest akapit z osadzonym CSS w linii.</p>
+        <p style="color: blue; font-size: 20px;">This is a paragraph with inline CSS.</p>
 
         <!-- Internal CSS -->
         <style>
@@ -23,11 +23,11 @@
                 font-size: 18px;
             }
         </style>
-        <p class="internal-css">To jest akapit z osadzonym CSS wewnętrznym.</p>
+        <p class="internal-css">This is a paragraph with internal CSS.</p>
 
         <!-- External CSS -->
         <link rel="stylesheet" href="styles.css">
-        <p class="external-css">To jest akapit z osadzonym CSS zewnętrznym.</p>
+        <p class="external-css">This is a paragraph with external CSS.</p>
     </main>
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
