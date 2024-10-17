@@ -145,3 +145,23 @@ div > p {
     border-style: solid;
     border-color: black;
 }
+
+/* Point 8: Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.special-table {
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+
+thead {
+	background-color: #ff7e7e;
+}
