@@ -1,0 +1,28 @@
+th {
+    background-color: #3d3d3d;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.even {
+    background-color: rgb(255, 249, 140);
+    font-weight: bold;
+    padding: 5px;
+}
+
+.odd {
+    background-color: rgb(130, 238, 255);
+    font-weight: bold;
+    padding: 5px;
+}
+
+.canvasLines {
+    border: 1px solid #000000;
+    width: 500px;
+    height: 500px;
+}
+
+table {
+    border: 1px solid #000000;
+}
