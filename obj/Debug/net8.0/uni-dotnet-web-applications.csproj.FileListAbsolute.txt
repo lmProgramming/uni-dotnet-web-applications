@@ -1,0 +1,15 @@
+C:\Users\janta\Desktop\uni-dotnet-web-applications\bin\Debug\net8.0\uni-dotnet-web-applications.exe
+C:\Users\janta\Desktop\uni-dotnet-web-applications\bin\Debug\net8.0\uni-dotnet-web-applications.deps.json
+C:\Users\janta\Desktop\uni-dotnet-web-applications\bin\Debug\net8.0\uni-dotnet-web-applications.runtimeconfig.json
+C:\Users\janta\Desktop\uni-dotnet-web-applications\bin\Debug\net8.0\uni-dotnet-web-applications.dll
+C:\Users\janta\Desktop\uni-dotnet-web-applications\bin\Debug\net8.0\uni-dotnet-web-applications.pdb
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.AssemblyInfoInputs.cache
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.AssemblyInfo.cs
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.csproj.CoreCompileInputs.cache
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.sourcelink.json
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.dll
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\refint\uni-dotnet-web-applications.dll
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.pdb
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\uni-dotnet-web-applications.genruntimeconfig.cache
+C:\Users\janta\Desktop\uni-dotnet-web-applications\obj\Debug\net8.0\ref\uni-dotnet-web-applications.dll
