@@ -26,3 +26,16 @@ th {
 table {
     border: 1px solid #000000;
 }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
