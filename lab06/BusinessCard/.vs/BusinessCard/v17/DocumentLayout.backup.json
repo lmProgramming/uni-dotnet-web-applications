@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\janta\\Desktop\\uni-dotnet-web-applications\\BusinessCard\\",
+  "WorkspaceRootPath": "C:\\Repositories\\uni-dotnet-web-applications\\lab06\\BusinessCard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54D28771-9D00-4F34-95ED-CAFEB9B003A6}|BusinessCard.csproj|c:\\users\\janta\\desktop\\uni-dotnet-web-applications\\businesscard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D28771-9D00-4F34-95ED-CAFEB9B003A6}|BusinessCard.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab06\\businesscard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D28771-9D00-4F34-95ED-CAFEB9B003A6}|BusinessCard.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\janta\\Desktop\\uni-dotnet-web-applications\\BusinessCard\\Program.cs",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab06\\BusinessCard\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\janta\\Desktop\\uni-dotnet-web-applications\\BusinessCard\\Program.cs",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab06\\BusinessCard\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T15:04:51.402Z",
               "EditorCaption": ""

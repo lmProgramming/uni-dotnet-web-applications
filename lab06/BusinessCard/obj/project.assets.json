@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\janta\\Desktop\\uni-dotnet-web-applications\\BusinessCard\\BusinessCard.csproj",
+      "projectUniqueName": "C:\\Repositories\\uni-dotnet-web-applications\\lab06\\BusinessCard\\BusinessCard.csproj",
       "projectName": "BusinessCard",
-      "projectPath": "C:\\Users\\janta\\Desktop\\uni-dotnet-web-applications\\BusinessCard\\BusinessCard.csproj",
+      "projectPath": "C:\\Repositories\\uni-dotnet-web-applications\\lab06\\BusinessCard\\BusinessCard.csproj",
       "packagesPath": "C:\\Users\\janta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\janta\\Desktop\\uni-dotnet-web-applications\\BusinessCard\\obj\\",
+      "outputPath": "C:\\Repositories\\uni-dotnet-web-applications\\lab06\\BusinessCard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
