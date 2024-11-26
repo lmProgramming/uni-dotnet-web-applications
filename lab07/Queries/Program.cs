@@ -1,4 +1,7 @@
-﻿namespace Queries
+﻿using ExamplesLinq;
+using System.Linq;
+
+namespace Queries
 {
     /*
     1. Korzystając z klas z wykładu 7 (WykladLINQ.zip) stworzyć metodę z zapytaniem
@@ -30,9 +33,35 @@
     */
     internal class Program
     {
+        static void PrintStudents(IEnumerable<StudentWithTopics> students)
+        {
+            foreach (var student in students)
+            {
+                Console.WriteLine(student);
+            }
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var students = ExamplesLinq.Generator.GenerateStudentsWithTopicsEasy();
+
+            Console.WriteLine("Task 1: ");
+            var studentsResult = GroupStudentsBySurname(students, 3);
+            foreach (var group in studentsResult)
+            {
+                Console.WriteLine("Grupa");
+                PrintStudents(group);
+            }
+        }
+
+        static IEnumerable<IEnumerable<StudentWithTopics>> GroupStudentsBySurname(IEnumerable<StudentWithTopics> students, int n)
+        {
+            return students
+                .OrderBy(student => student.Name)
+                .ThenBy(student => student.Index)
+                .Select((student, index) => new { Student = student, Index = index })
+                .GroupBy(item => item.Index / n)
+                .Select(group => group.Select(item => item.Student));
         }
     }
 }

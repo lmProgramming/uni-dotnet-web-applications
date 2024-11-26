@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{9CEF70E3-6C13-4DEC-967F-2EF50BCAE714}|Queries.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab07\\queries\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CEF70E3-6C13-4DEC-967F-2EF50BCAE714}|Queries.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CEF70E3-6C13-4DEC-967F-2EF50BCAE714}|Queries.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab07\\queries\\lecturelinq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CEF70E3-6C13-4DEC-967F-2EF50BCAE714}|Queries.csproj|solutionrelative:lecturelinq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CEF70E3-6C13-4DEC-967F-2EF50BCAE714}|Queries.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab07\\queries\\exampleslinq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CEF70E3-6C13-4DEC-967F-2EF50BCAE714}|Queries.csproj|solutionrelative:exampleslinq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExamplesLinq.cs",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab07\\Queries\\ExamplesLinq.cs",
+              "RelativeDocumentMoniker": "ExamplesLinq.cs",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab07\\Queries\\ExamplesLinq.cs",
+              "RelativeToolTip": "ExamplesLinq.cs",
+              "ViewState": "AgIAAJICAAAAAAAAAAAvwJwCAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T08:32:49.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LectureLinq.cs",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab07\\Queries\\LectureLinq.cs",
+              "RelativeDocumentMoniker": "LectureLinq.cs",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab07\\Queries\\LectureLinq.cs",
+              "RelativeToolTip": "LectureLinq.cs",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAvwFMBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T08:25:29.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +62,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab07\\Queries\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswDMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T07:51:42.911Z",
               "EditorCaption": ""
