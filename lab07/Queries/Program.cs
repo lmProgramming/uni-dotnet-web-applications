@@ -160,8 +160,8 @@ namespace Queries
 
             Console.WriteLine("b)");
             MethodInfo changeDepartmentMethod = typeof(Student).GetMethod("ChangeDepartment", [typeof(int)]);
-            string result1 = changeDepartmentMethod.Invoke(student1, [8]) as string;
-            string result2 = changeDepartmentMethod.Invoke(student2, [3]) as string;
+            object result1 = changeDepartmentMethod.Invoke(student1, [8]) as string;
+            object result2 = changeDepartmentMethod.Invoke(student2, [3]) as string;
 
             Console.WriteLine("Result of ToString method for student1: " + result1);
             Console.WriteLine("Result of ToString method for student2: " + result2);
