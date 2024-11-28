@@ -1,8 +1,5 @@
 ﻿using ExamplesLinq;
-using System;
-using System.Linq;
 using System.Reflection;
-using System.Xml.Linq;
 
 namespace Queries
 {
@@ -48,9 +45,8 @@ namespace Queries
 
         public override string ToString()
         {
-            var result = $"{Id,2}) {Index,5}, {Name,11}, {Gender,6},{(Active ? "active" : "no active"),9},{DepartmentId,2}, topics: ";
-            foreach (var str in Topics)
-                result += str + ", ";
+            var result = $"{Id,2}) {Index,5}, {Name,11}, {Gender,6},{(Active ? "active" : "no active"),9},{DepartmentId,2}, topics: {string.Join(", ", Topics)}";
+
             return result;
         }
 
@@ -155,11 +151,16 @@ namespace Queries
 
             Console.WriteLine("\nTask 4: ");
             Console.WriteLine("a)");
-            object student1 = new Student(1, 1001, "John Doe", Gender.Male, true, 1, new List<Topic> { new Topic("1", "Math") });
-            object student2 = new Student(2, 1002, "Jane Smith", Gender.Female, true, 2, new List<Topic> { new Topic("2", "Science") });
+
+            Type studentType = Type.GetType("Queries.Student");
+
+            object student1 = Activator.CreateInstance(studentType, 1, 1001, "John Doe", Gender.Male, true, 1, new List<Topic> { new Topic("1", "Math") });
+            object student2 = Activator.CreateInstance(studentType, 2, 1002, "Jane Smith", Gender.Female, true, 2, new List<Topic> { new Topic("2", "Science") });
+
+            Console.WriteLine("Result of ToString method for student1: " + student1);
 
             Console.WriteLine("b)");
-            MethodInfo changeDepartmentMethod = typeof(Student).GetMethod("ChangeDepartment", [typeof(int)]);
+            MethodInfo changeDepartmentMethod = studentType.GetMethod("ChangeDepartment", [typeof(int)]);
             object result1 = changeDepartmentMethod.Invoke(student1, [8]) as string;
             object result2 = changeDepartmentMethod.Invoke(student2, [3]) as string;
 

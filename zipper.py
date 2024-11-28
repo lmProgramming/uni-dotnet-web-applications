@@ -15,7 +15,7 @@ def zip_files(folder_path, output_zip):
 if __name__ == "__main__":
     folder_path: str = input("Enter the folder path to zip: ")
     folder_name: str = folder_path.split('/')[-1]
-    output_zip: str = f"zips/{folder_name}-___-Kubs.zip"
+    output_zip: str = f"zips/{folder_name.capitalize()}-___-Kubs.zip"
     zip_files(folder_path, output_zip)
     print(f"Files zipped successfully into {output_zip}")
     print("Don't forget to change \"___\" into appropriate text")
