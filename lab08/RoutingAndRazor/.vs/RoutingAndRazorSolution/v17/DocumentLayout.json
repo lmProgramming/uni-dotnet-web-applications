@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\quadraticequation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\quadraticequation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\views\\game\\guess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\views\\game\\guess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\views\\home\\alldataprobe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\views\\home\\alldataprobe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|c:\\repositories\\uni-dotnet-web-applications\\lab08\\routingandrazor\\firstnet8mvc\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FE55D55-BFD1-40EE-8F36-9AF4D802B054}|FirstNet8MVC\\RoutingAndRazor.csproj|solutionrelative:firstnet8mvc\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,40 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Solve.cshtml",
-              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
-              "RelativeDocumentMoniker": "FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
-              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
-              "RelativeToolTip": "FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T19:24:45.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AllDataProbe.cshtml",
-              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
-              "RelativeDocumentMoniker": "FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
-              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
-              "RelativeToolTip": "FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-03T19:04:46.072Z",
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "FirstNet8MVC\\Controllers\\GameController.cs",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Controllers\\GameController.cs",
+              "RelativeToolTip": "FirstNet8MVC\\Controllers\\GameController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAiwDsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T19:35:08.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "QuadraticEquation.cs",
-              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\QuadraticEquation.cs",
-              "RelativeDocumentMoniker": "FirstNet8MVC\\QuadraticEquation.cs",
-              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\QuadraticEquation.cs",
-              "RelativeToolTip": "FirstNet8MVC\\QuadraticEquation.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T18:57:14.393Z",
+              "Title": "Guess.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Game\\Guess.cshtml",
+              "RelativeDocumentMoniker": "FirstNet8MVC\\Views\\Game\\Guess.cshtml",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Game\\Guess.cshtml",
+              "RelativeToolTip": "FirstNet8MVC\\Views\\Game\\Guess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T19:34:25.743Z",
               "EditorCaption": ""
             },
             {
@@ -83,14 +74,40 @@
               "RelativeDocumentMoniker": "FirstNet8MVC\\Controllers\\ToolController.cs",
               "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Controllers\\ToolController.cs",
               "RelativeToolTip": "FirstNet8MVC\\Controllers\\ToolController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T18:54:38.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Solve.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
+              "RelativeDocumentMoniker": "FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
+              "RelativeToolTip": "FirstNet8MVC\\Views\\Tool\\Solve.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T19:24:45.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "AllDataProbe.cshtml",
+              "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
+              "RelativeDocumentMoniker": "FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
+              "ToolTip": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
+              "RelativeToolTip": "FirstNet8MVC\\Views\\Home\\AllDataProbe.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-03T19:04:46.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Repositories\\uni-dotnet-web-applications\\lab08\\RoutingAndRazor\\FirstNet8MVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "FirstNet8MVC\\Controllers\\HomeController.cs",
