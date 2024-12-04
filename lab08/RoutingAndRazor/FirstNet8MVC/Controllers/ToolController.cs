@@ -17,6 +17,35 @@ namespace RoutingAndRazor.Controllers
     */
     public class ToolController : Controller
     {
+        [Route("Tool/Solve/{a}/{b}/{c}")]
+        public IActionResult Solve(double a, double b, double c)
+        {
+            var quadraticEquation = new QuadraticEquation.QuadraticEquation(a, b, c);
+            QuadraticEquation.SolutionsCount solutionsCount;
+            var solutions = quadraticEquation.CalculateSolutions(out solutionsCount);
+            var result = quadraticEquation.GetPrettySolutions(solutions, solutionsCount);
+            ViewBag.Result = result;
+            int solutionsCountInt;
+            switch (solutionsCount)
+            {
+                case QuadraticEquation.SolutionsCount.Zero:
+                    solutionsCountInt = 0;
+                    break;
+                case QuadraticEquation.SolutionsCount.One:
+                    solutionsCountInt = 1;
+                    break;
+                case QuadraticEquation.SolutionsCount.Two:
+                    solutionsCountInt = 2;
+                    break;
+                default:
+                    solutionsCountInt = -1;
+                    break;
+            }
+            
+            ViewBag.ResultCount = solutionsCountInt;
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();

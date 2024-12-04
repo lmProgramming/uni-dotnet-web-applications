@@ -1,0 +1,21 @@
+
+@{
+    ViewData["Title"] = "Solve Quadratic Equation";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="result">
+    @ViewBag.Result
+</div>
+
+<style>
+    .result {
+        font-size: 1.5em;
+        color: @(
+            ViewBag.ResultCount == 0 ? "red" : 
+            ViewBag.ResultCount == 1 ? "orange" : 
+            ViewBag.ResultCount == 2 ? "green" : "purple"
+        )
+    }
+</style>

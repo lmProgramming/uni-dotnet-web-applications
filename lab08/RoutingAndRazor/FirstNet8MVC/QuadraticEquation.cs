@@ -1,24 +1,18 @@
-﻿namespace Program
+﻿namespace QuadraticEquation
 {
-    public class QuadraticEquation
+    public enum SolutionsCount
     {
-        public enum SolutionsCount
-        {
-            Zero,
-            One,
-            Two,
-            Infinity,
-        }
-        public double A;
-        public double B;
-        public double C;
+        Zero,
+        One,
+        Two,
+        Infinity,
+    }
 
-        public QuadraticEquation(double a, double b, double c)
-        {
-            A = a;
-            B = b;
-            C = c;
-        }
+    public class QuadraticEquation(double a, double b, double c)
+    {
+        public double A = a;
+        public double B = b;
+        public double C = c;
 
         public double[] CalculateSolutions(out SolutionsCount solutionsCount)
         {
@@ -31,9 +25,11 @@
                         solutionsCount = SolutionsCount.Infinity;
                         return [];
                     }
-
-                    solutionsCount = SolutionsCount.Zero;
-                    return [];
+                    else
+                    {
+                        solutionsCount = SolutionsCount.Zero;
+                        return [];
+                    }
                 }
 
                 solutionsCount = SolutionsCount.One;
@@ -60,12 +56,8 @@
             ];
         }
 
-        public string CalculatePrettySolutions()
+        public string GetPrettySolutions(double[] solutions, SolutionsCount solutionsCount)
         {
-            SolutionsCount solutionsCount;
-
-            double[] solutions = CalculateSolutions(out solutionsCount);
-
             switch (solutionsCount)
             {
                 case SolutionsCount.Zero:
@@ -79,6 +71,15 @@
                 default:
                     return "Nieznana ilość rozwiązań";
             }
+        }
+
+        public string CalculatePrettySolutions()
+        {
+            SolutionsCount solutionsCount;
+
+            double[] solutions = CalculateSolutions(out solutionsCount);
+
+            return GetPrettySolutions(solutions, solutionsCount);
         }
 
         public override string ToString()
