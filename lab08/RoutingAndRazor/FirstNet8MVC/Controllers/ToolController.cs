@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 
 namespace RoutingAndRazor.Controllers
 {
@@ -25,24 +26,27 @@ namespace RoutingAndRazor.Controllers
             var solutions = quadraticEquation.CalculateSolutions(out solutionsCount);
             var result = quadraticEquation.GetPrettySolutions(solutions, solutionsCount);
             ViewBag.Result = result;
-            int solutionsCountInt;
-            switch (solutionsCount)
+
+            string textColor = solutionsCount switch
             {
-                case QuadraticEquation.SolutionsCount.Zero:
-                    solutionsCountInt = 0;
-                    break;
-                case QuadraticEquation.SolutionsCount.One:
-                    solutionsCountInt = 1;
-                    break;
-                case QuadraticEquation.SolutionsCount.Two:
-                    solutionsCountInt = 2;
-                    break;
-                default:
-                    solutionsCountInt = -1;
-                    break;
-            }
-            
-            ViewBag.ResultCount = solutionsCountInt;
+                QuadraticEquation.SolutionsCount.Zero => "red",
+                QuadraticEquation.SolutionsCount.One => "orange",
+                QuadraticEquation.SolutionsCount.Two => "green",
+                QuadraticEquation.SolutionsCount.Infinity => "purple",
+                _ => "black"
+            };
+            ViewBag.ResultColor = textColor;
+
+            string fontWeight = solutionsCount switch
+            {
+                QuadraticEquation.SolutionsCount.Zero => "bold",
+                QuadraticEquation.SolutionsCount.One => "normal",
+                QuadraticEquation.SolutionsCount.Two => "normal",
+                QuadraticEquation.SolutionsCount.Infinity => "normal",
+                _ => "normal"
+            };
+            ViewBag.ResultFontWeight = fontWeight;
+
             return View();
         }
 

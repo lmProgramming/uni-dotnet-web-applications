@@ -12,10 +12,7 @@
 <style>
     .result {
         font-size: 1.5em;
-        color: @(
-            ViewBag.ResultCount == 0 ? "red" : 
-            ViewBag.ResultCount == 1 ? "orange" : 
-            ViewBag.ResultCount == 2 ? "green" : "purple"
-        )
+        color: @ViewBag.ResultColor;
+        font-weight: @ViewBag.ResultFontWeight;
     }
 </style>
