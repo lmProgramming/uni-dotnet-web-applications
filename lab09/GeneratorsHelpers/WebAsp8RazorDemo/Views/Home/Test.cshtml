@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "Test";
+}
+
+@{
+    var students = new ArticleViewModel[]
+    {
+            new ArticleViewModel(0,123456,"Kowal",Gender.Male,true,2,new DateTime()),
+            new ArticleViewModel(1,123457,"Newman",Gender.Female,false,1,new DateTime(2000,3,22))
+                            };
+}
+
+<p>@DateTime.Now</p>
+<p>@DateTime.IsLeapYear(2016)</p>
+
+<p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+
+@{
+    var joe = new ArticleViewModel(0, 123456, "Joe", Gender.Male, true, 2, new DateTime());
+}
+<p>Name@(joe.Name)</p>
+
+
+@using WebAsp8RazorDemo.Models.ViewModels
+<h2>@ViewBag.Title</h2>
+
+@{
+    var inCSharp = true;
+    <p>Now in HTML, was in C# @inCSharp</p>
+}
+
+@for (var y = 0; y < students.Length; y++)
+{
+    var student = students[y];
+    <p> Name: @student.Name</p>
+}
+
+
+@for (var x = 0; x < students.Length; x++)
+{
+    var student = students[x];
+    @:Name: @student.Name
+}
+
+
+
+
+<h3>Using @@if</h3>
+@{ var number = 11111;}
+@if (number % 2 == 0)
+{
+    <p>The number was even</p>
+}
+else if (number >= 1337)
+{
+    <p>The number is large.</p>
+}
+else
+{
+    <p>The number was not large and is odd.</p>
+}
+
+<h3>Using  @@switch</h3>
+@switch (number)
+{
+    case 1:
+        <p>The number is 1!</p>
+        break;
+    case 1337:
+        <p>Your number is 1337!</p>
+        break;
+    default:
+        <p>Your number was not 1 or 1337.</p>
+        break;
+}
+
+
+<h3>Using @@for</h3>
+
+@for (var i = 0; i < students.Length; i++)
+{
+    var stud = students[i];
+    <p>Name: @stud.Name</p>
+    <p>Index: @stud.Index</p>
+    <hr />
+}
+
+<h3>Using @@foreach</h3>
+@foreach (var person in students)
+{
+    <p>Name: @person.Name</p>
+    <p>Index: @person.Index</p>
+    <hr />
+}
+
+<h3>Using @@while</h3>
+
+@{ var i2 = 0; }
+@while (i2 < students.Length)
+{
+    var person = students[i2];
+    <p>Name: @person.Name</p>
+    <p>Index: @person.Index</p>
+
+    i2++;
+    <hr />
+}
+
+<h3>Using @@do while</h3>
+@{ var i3 = 0; }
+@do
+{
+    var person = students[i3];
+    <p>Name: @person.Name</p>
+    <p>Index: @person.Index</p>
+
+    i3++;
+} while (i3 < students.Length);
+
+<h3>Using @@using</h3>
+
+@using System.IO
+@{
+    var dir = Directory.GetCurrentDirectory();
+}
+<p>Current folder is: @dir</p>
+
+@using (Html.BeginForm())
+{
+    <div>
+        email:
+        <input type="email" id="Email" name="Email" value="" />
+        <button type="submit"> Register </button>
+    </div>
+}
+
+<h3>Using @@* - begin</h3>
+
+@*
+
+    very long comment
+    many lines
+
+*@
+
+<h3>Using *@@ - end</h3>
+

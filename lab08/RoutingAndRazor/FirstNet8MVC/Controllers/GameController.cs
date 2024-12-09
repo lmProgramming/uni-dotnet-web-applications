@@ -7,38 +7,48 @@ namespace RoutingAndRazor.Controllers
     {
         private static int n = 100;
         private static int chosenRandomValue;
-        private static int guessCount;
+
+        private static List<int> guesses = new();
 
         static GameController()
         {
-            DrawNewNumber();
+            Reset();
         }
 
         [Route("Set,{n}")]
         public IActionResult Set(int n)
         {
             GameController.n = n;
-            DrawNewNumber();
-            return Content($"Zakres ustawiony na {n}. Wylosowano nową liczbę.");
+            Reset();
+
+            ViewBag.Result = $"Ustawiono zakres na <0, {n})";
+
+            return View();
         }
 
         [Route("Draw")]
         public IActionResult Draw()
         {
-            DrawNewNumber();
-            return Content("Wylosowano nową liczbę.");
+            Reset();
+
+            ViewBag.Result = $"Ustawiono nową liczbę na zakresie <0, {n})";
+
+            return View();
         }
 
         [Route("Guess,{guess}")]
         public IActionResult Guess(int guess)
         {
-            guessCount++;
+            guesses.Add(guess);
+            string guessesSequence = string.Join(',', guesses);
+            var guessCount = guesses.Count;
+
             if (guess == chosenRandomValue)
             {
-                ViewBag.Result = $"Gratulacje! Zgadłeś liczbę {chosenRandomValue} w {guessCount} próbach. Została wylosowana nowa liczba.";
+                ViewBag.Result = $"Gratulacje! Zgadłeś liczbę {chosenRandomValue} w {guessCount} próbach. Została wylosowana nowa liczba. Sekwencja: {guessesSequence}";
                 ViewBag.Color = ToHex(Color.DarkGreen);
                 ViewBag.FontWeight = "bold";
-                DrawNewNumber();
+                Reset();
                 return View();
             }
 
@@ -52,11 +62,11 @@ namespace RoutingAndRazor.Controllers
 
             if (guess < chosenRandomValue)
             {
-                ViewBag.Result = $"Za mała liczba.{(guess < 0 ? scaleReminder : "")} Próba: {guessCount}";
+                ViewBag.Result = $"Za mała liczba.{(guess < 0 ? scaleReminder : "")} Próba: {guessCount}. Sekwencja: {guessesSequence}";
                 return View();
             }
 
-            ViewBag.Result = $"Za duża liczba.{(guess >= n ? scaleReminder : "")} Próba: {guessCount}";
+            ViewBag.Result = $"Za duża liczba.{(guess >= n ? scaleReminder : "")} Próba: {guessCount}. Sekwencja: {guessesSequence}";
             return View();
         }
 
@@ -71,11 +81,11 @@ namespace RoutingAndRazor.Controllers
             return ToHex(Color.FromArgb(r, g, b));
         }
 
-        private static void DrawNewNumber()
+        private static void Reset()
         {
             var random = new Random();
             chosenRandomValue = random.Next(0, n);
-            guessCount = 0;
+            guesses = new();
         }
 
         public IActionResult Index()

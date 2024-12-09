@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Test HTML helpers";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@Html.Label("exampleLabel", "Example label:")
+<hr />
+@Html.Label("textArea1", "TextArea:")
+@Html.TextArea("textArea1", "initial text", 4, 30, null)
+<hr />
+@Html.Label("editor1", "Editor:")
+@Html.Editor("editor1")
+<hr />
+@Html.Label("textBox1", "TextBox:")
+@Html.TextBox("textBox1", "text")
+<hr />
+@Html.Label("pass1", "Password:")
+@Html.Password("pass1")
+<hr />
+@Html.Label("checkBox1", "CheckBox:")
+@Html.CheckBox("checkBox1", true)
+<hr />
+@Html.Label("lblradbut", "RadioButton:")
+<br />
+@Html.Label("radioButton1", "female:")
+@Html.RadioButton("radioButton1", "female", false);
+@Html.Label("radioButton2", "male:")
+@Html.RadioButton("radioButton2", "male", false);
+<hr />
+@Html.Label("DropDown1", "DropDownList:")
+@Html.DropDownList("DropDown1", new SelectList(
+                  new List<Object>{
+                       new { value = 0 , text = "Red"  },
+                       new { value = 1 , text = "Blue" },
+                       new { value = 2 , text = "Green"}
+                    },
+                  "value",
+                  "text",
+                   2))
+<hr />
+@Html.Label("listBox1", "ListBox:")
+@Html.ListBox("listBox1", new SelectList(
+                  new List<Object>{
+                       new { value = 0 , text = "Red"  },
+                       new { value = 1 , text = "Blue" },
+                       new { value = 2 , text = "Green"}
+                    },
+                  "value",
+                  "text",
+                   2))
+<hr />
