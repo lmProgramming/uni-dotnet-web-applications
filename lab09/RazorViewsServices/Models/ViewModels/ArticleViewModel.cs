@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace WebAsp8RazorDemo.Models.ViewModels
 {
-    public enum ArticleType { Food, Other }
+    public enum ArticleType { Dairy, Meat, Fish, Fruit, Vegetable, Bakery }
 
     public class ArticleViewModel
     {

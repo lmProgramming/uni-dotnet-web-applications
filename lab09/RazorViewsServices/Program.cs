@@ -10,7 +10,8 @@ namespace RazorViewsServices
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<IArticleContext, MockArticleContext>();
+            //builder.Services.AddSingleton<IArticleContext, MockArticleContext>();
+            builder.Services.AddSingleton<IArticleContext, MockDictionaryArticleContext>();
 
             var app = builder.Build();
 
