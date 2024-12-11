@@ -5,14 +5,9 @@ using WebAsp8RazorDemo.Models.ViewModels;
 
 namespace RazorViewsServices.Controllers
 {
-    public class ArticleController : Controller
+    public class ArticleController(IArticleContext articleContext) : Controller
     {
-        private IArticleContext _articleContext;
-
-        public ArticleController(IArticleContext articleContext)
-        {
-            _articleContext = articleContext;
-        }
+        private IArticleContext _articleContext = articleContext;
 
         // GET: ArticleController
         public ActionResult Index()
@@ -23,7 +18,7 @@ namespace RazorViewsServices.Controllers
         // GET: ArticleController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(_articleContext.GetArticle(id));
         }
 
         // GET: ArticleController/Create
@@ -86,7 +81,7 @@ namespace RazorViewsServices.Controllers
         // POST: ArticleController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, ArticleViewModel articleViewModel)
         {
             try
             {

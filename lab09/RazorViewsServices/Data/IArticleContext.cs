@@ -6,8 +6,8 @@ namespace WebAsp8RazorDemo.Data
     {
         List<ArticleViewModel> GetArticles();
         ArticleViewModel? GetArticle(int id);
-        void AddArticle(ArticleViewModel person);
+        void AddArticle(ArticleViewModel article);
         void RemoveArticle(int id);
-        void UpdateArticle(ArticleViewModel person);
+        void UpdateArticle(ArticleViewModel article);
     }
 }

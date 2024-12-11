@@ -11,7 +11,7 @@ namespace WebAsp8RazorDemo.Models.ViewModels
 
         [Required]
         [MinLength(2, ErrorMessage = "Too short name")]
-        [Display(Name = "Last Name")]
+        [Display(Name = "Product Name")]
         [MaxLength(20, ErrorMessage = " Too long name, do not exceed {1}")]
         public string? Name { get; set; }        
 
@@ -19,9 +19,8 @@ namespace WebAsp8RazorDemo.Models.ViewModels
         public decimal Price { get; set; }
 
         [DataType(DataType.DateTime)]
-        [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime ExpirationDate { get; set; }
+        public DateTime? ExpirationDate { get; set; }
 
         public ArticleType ArticleType { get; set; }
 
@@ -33,7 +32,7 @@ namespace WebAsp8RazorDemo.Models.ViewModels
 
         }
 
-        public ArticleViewModel(int id, string name, decimal price, DateTime expirationDate, ArticleType articleType, int quantity)
+        public ArticleViewModel(int id, string name, decimal price, ArticleType articleType, int quantity, DateTime? expirationDate = null)
         {
             Id = id;
             Name = name;

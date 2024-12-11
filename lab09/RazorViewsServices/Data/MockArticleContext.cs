@@ -4,10 +4,10 @@ namespace WebAsp8RazorDemo.Data
 {
     public class MockArticleContext : IArticleContext
     {
-        List<ArticleViewModel> articles = new List<ArticleViewModel>() {
-            new ArticleViewModel(1, "Apple", 1.5m, new DateTime(2021, 12, 31), ArticleType.Food, 10),
-            new ArticleViewModel(2, "Banana", 2.5m, new DateTime(2021, 12, 31), ArticleType.Food, 20),
-            new ArticleViewModel(3, "Orange", 3.5m, new DateTime(2021, 12, 31), ArticleType.Food, 30),
+        List<ArticleViewModel> articles = new() {
+            new(1, "Apple", 1.5m, ArticleType.Food, 10, new DateTime(2021, 12, 31)),
+            new(2, "Banana", 2.5m, ArticleType.Food, 20, new DateTime(2021, 12, 31)),
+            new(3, "Orange", 3.5m, ArticleType.Food, 30, new DateTime(2021, 12, 31)),
         };
         public void AddArticle(ArticleViewModel student)
         {
@@ -25,14 +25,14 @@ namespace WebAsp8RazorDemo.Data
         }
         public void RemoveArticle(int id)
         {
-            ArticleViewModel? studToRemove = articles.FirstOrDefault(s => s.Id == id);
-            if (studToRemove != null)
-                articles.Remove(studToRemove);
+            ArticleViewModel? articleToRemove = articles.FirstOrDefault(s => s.Id == id);
+            if (articleToRemove != null)
+                articles.Remove(articleToRemove);
         }
-        public void UpdateArticle(ArticleViewModel person)
+        public void UpdateArticle(ArticleViewModel article)
         {
-            ArticleViewModel? studToUpdate = articles.FirstOrDefault(s => s.Id == person.Id);
-            articles = articles.Select(s => (s.Id == person.Id) ? person : s).ToList();
+            ArticleViewModel? articleToUpdate = articles.FirstOrDefault(s => s.Id == article.Id);
+            articles = articles.Select(s => (s.Id == article.Id) ? article : s).ToList();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿@model WebAsp8RazorDemo.Models.ViewModels.ArticleViewModel
+﻿@using WebAsp8RazorDemo.Models.ViewModels
+@model WebAsp8RazorDemo.Models.ViewModels.ArticleViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -24,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
+                <input asp-for="Price" class="form-control" type="number" step="0.01" lang="pl" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -34,7 +35,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="ArticleType" class="control-label"></label>
-                <input asp-for="ArticleType" class="form-control" />
+                <select asp-for="ArticleType" class="custom-select" asp-items="Html.GetEnumSelectList<ArticleType>()">
+                    <option value="">-- Select Article Type --</option>
+                </select>
                 <span asp-validation-for="ArticleType" class="text-danger"></span>
             </div>
             <div class="form-group">
