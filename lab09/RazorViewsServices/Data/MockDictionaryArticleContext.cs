@@ -6,9 +6,9 @@ namespace WebAsp8RazorDemo.Data
     {
         private Dictionary<int, ArticleViewModel> articles = new()
         {
-            { 1, new ArticleViewModel(1, "Apple", 2.5m, ArticleType.Fruit, 10, new DateTime(2024, 12, 31)) },
-            { 2, new ArticleViewModel(2, "Cheese", 8.5m, ArticleType.Dairy, 20, new DateTime(2024, 12, 15)) },
-            { 3, new ArticleViewModel(3, "Salmon", 13.5m, ArticleType.Fish, 30, new DateTime(2024, 12, 16)) }
+            { 1, new ArticleViewModel(1, "Apple from dictionary", 2.5m, ArticleType.Fruit, 10, new DateTime(2024, 12, 31)) },
+            { 2, new ArticleViewModel(2, "Cheese from dictionary", 8.5m, ArticleType.Dairy, 20, new DateTime(2024, 12, 15)) },
+            { 3, new ArticleViewModel(3, "Salmon from dictionary", 13.5m, ArticleType.Fish, 30, new DateTime(2024, 12, 16)) }
         };
 
         public void AddArticle(ArticleViewModel article)
@@ -26,7 +26,7 @@ namespace WebAsp8RazorDemo.Data
 
         public List<ArticleViewModel> GetArticles()
         {
-            return articles.Values.ToList();
+            return articles.Values.OrderBy(article => article.Id).ToList();
         }
 
         public void RemoveArticle(int id)

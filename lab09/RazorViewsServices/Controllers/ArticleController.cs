@@ -93,5 +93,31 @@ namespace RazorViewsServices.Controllers
                 return View();
             }
         }
+
+        public ActionResult Duplicate(int id)
+        {
+            return View(_articleContext.GetArticle(id));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Duplicate(int id, ArticleViewModel article)
+        {
+            try
+            {
+                var articleBase = _articleContext.GetArticle(id);
+                if (articleBase == null)
+                {
+                    return NotFound();
+                }
+                ArticleViewModel newArticle = new(id, articleBase.Name, articleBase.Price, articleBase.ArticleType, articleBase.Quantity, articleBase.ExpirationDate);
+                _articleContext.AddArticle(newArticle);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

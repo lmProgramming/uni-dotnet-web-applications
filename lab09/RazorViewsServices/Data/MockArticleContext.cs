@@ -5,7 +5,7 @@ namespace WebAsp8RazorDemo.Data
     public class MockArticleContext : IArticleContext
     {
         List<ArticleViewModel> articles = [
-            new(1, "Apple", 2.5m, ArticleType.Fruit, 10, new DateTime(2024, 12, 31)),
+            new(1, "Apple from a list", 2.5m, ArticleType.Fruit, 10, new DateTime(2024, 12, 31)),
             new(2, "Cheese", 8.5m, ArticleType.Dairy, 20, new DateTime(2024, 12, 15)),
             new(3, "Salmon", 13.5m, ArticleType.Fish, 30, new DateTime(2024, 12, 16)),
         ];
