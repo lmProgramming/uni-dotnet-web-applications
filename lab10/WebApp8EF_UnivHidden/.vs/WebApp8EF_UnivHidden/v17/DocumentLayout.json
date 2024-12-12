@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\views\\students\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\views\\students\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\controllers\\facultiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\controllers\\facultiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\models\\faculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\data\\universitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\data\\universitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univhidden\\webapp8ef_univhidden\\migrations\\20241210212309_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46378EE-91ED-462E-8C27-30E744646C36}|WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden.csproj|solutionrelative:webapp8ef_univhidden\\migrations\\20241210212309_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:54:58.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Controllers\\CoursesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:54:29.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Faculty.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Models\\Faculty.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Models\\Faculty.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Models\\Faculty.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Models\\Faculty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:36:59.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FacultiesController.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Controllers\\FacultiesController.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Controllers\\FacultiesController.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Controllers\\FacultiesController.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Controllers\\FacultiesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:53:52.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Views\\Students\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Views\\Students\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Views\\Students\\Create.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Views\\Students\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T22:01:58.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T21:55:19.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241210212309_Init.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Migrations\\20241210212309_Init.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Migrations\\20241210212309_Init.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Migrations\\20241210212309_Init.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Migrations\\20241210212309_Init.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T21:23:09.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UniversityDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Data\\UniversityDbContext.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Data\\UniversityDbContext.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Data\\UniversityDbContext.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Data\\UniversityDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwAcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:43:42.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Models\\Course.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:37:21.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Models\\Student.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:36:44.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\Program.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\Program.cs",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T20:46:23.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivHidden\\appsettings.json",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivHidden\\WebApp8EF_UnivHidden\\appsettings.json",
+              "RelativeToolTip": "WebApp8EF_UnivHidden\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-10T20:44:34.481Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

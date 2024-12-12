@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\views\\students\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\views\\students\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\views\\courses\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\views\\courses\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\views\\students\\createenroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\views\\students\\createenroll.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\models\\coursestudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\models\\coursestudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\data\\universitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\data\\universitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|c:\\users\\dariu\\source\\repos\\webapp8ef_univdirect\\webapp8ef_univdirect\\views\\students\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3891695D-EB0E-4F48-9183-4F5CCFEA49A0}|WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect.csproj|solutionrelative:webapp8ef_univdirect\\views\\students\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Courses\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Views\\Courses\\Details.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Courses\\Details.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Views\\Courses\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T19:22:06.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCAAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T19:08:22.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Students\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Views\\Students\\Details.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Students\\Details.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Views\\Students\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T18:59:13.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Students\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Views\\Students\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Students\\Create.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Views\\Students\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T18:58:35.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateEnroll.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Students\\CreateEnroll.cshtml",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Views\\Students\\CreateEnroll.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Views\\Students\\CreateEnroll.cshtml",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Views\\Students\\CreateEnroll.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T18:58:29.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:46:53.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UniversityDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Data\\UniversityDbContext.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Data\\UniversityDbContext.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Data\\UniversityDbContext.cs",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Data\\UniversityDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T19:14:01.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CourseStudent.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Models\\CourseStudent.cs",
+              "RelativeDocumentMoniker": "WebApp8EF_UnivDirect\\Models\\CourseStudent.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp8EF_UnivDirect\\WebApp8EF_UnivDirect\\Models\\CourseStudent.cs",
+              "RelativeToolTip": "WebApp8EF_UnivDirect\\Models\\CourseStudent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T19:16:06.51Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
