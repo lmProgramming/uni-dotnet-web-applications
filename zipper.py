@@ -5,6 +5,9 @@ import zipfile
 def zip_files(folder_path, output_zip):
     with zipfile.ZipFile(output_zip, 'w') as zipf:
         for root, dirs, files in os.walk(folder_path):
+            x = input()
+            if x:
+                continue
             for file in files:
                 if not file.endswith('.pdf'):
                     file_path = os.path.join(root, file)
