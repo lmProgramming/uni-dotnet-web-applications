@@ -19,13 +19,23 @@ namespace EntityFramework.Controllers
             _context = context;
         }
 
-        // GET: Students
+        // GET: Articles
         public async Task<IActionResult> Index()
         {
             var articles = await _context.Articles
                                          .Include(a => a.Category)
                                          .ToListAsync();
+            ViewBag.ViewMode = HttpContext.Session.GetString("ViewMode") ?? "Table";
             return View(articles);
+        }
+
+        [HttpPost]
+        public IActionResult ToggleViewMode()
+        {
+            var currentViewMode = HttpContext.Session.GetString("ViewMode") ?? "Table";
+            var newViewMode = currentViewMode == "Table" ? "Card" : "Table";
+            HttpContext.Session.SetString("ViewMode", newViewMode);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Students/Details/5

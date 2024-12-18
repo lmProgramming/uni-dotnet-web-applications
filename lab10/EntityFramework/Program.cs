@@ -14,6 +14,8 @@ namespace EntityFramework
             builder.Services.AddDbContextPool<ArticleDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MyDb"))
             );
+            builder.Services.AddSession();
+
 
             var app = builder.Build();
 
@@ -31,6 +33,7 @@ namespace EntityFramework
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
