@@ -11,7 +11,7 @@ namespace EntityFramework
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContextPool<StudentDbContext>(options =>
+            builder.Services.AddDbContextPool<ArticleDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MyDb"))
             );
 

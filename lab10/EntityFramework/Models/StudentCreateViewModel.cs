@@ -18,7 +18,7 @@ namespace EntityFramework.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? ExpirationDate { get; set; }
 
-        public ArticleType ArticleType { get; set; }
+        public Category Category { get; set; }
 
         [Range(0, int.MaxValue, ErrorMessage = "Quantity must be at least 0")]
         public int Quantity { get; set; }

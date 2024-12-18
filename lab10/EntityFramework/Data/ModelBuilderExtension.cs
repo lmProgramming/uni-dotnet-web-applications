@@ -1,5 +1,6 @@
 ﻿using EntityFramework.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace EntityFramework.Data
 {
@@ -7,24 +8,31 @@ namespace EntityFramework.Data
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Article>().HasData(
-                new Article()
-                {
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Bakery" },
+                new Category { Id = 2, Name = "Dairy" }
+            );
 
+            modelBuilder.Entity<Article>().HasData(
+                new Article
+                {
+                    Id = 1,
+                    Name = "Bread",
+                    Price = 1.2m,
+                    CategoryId = 1,
+                    Quantity = 20,
+                    ExpirationDate = new DateTime(2024, 12, 31)
                 },
-                new Article()
+                new Article
                 {
                     Id = 2,
-                    Index = 222222,
-                    Name = "Yasmin",
-                    Gender = Gender.Female,
-                    BirthDate = new DateTime(2000, 2, 2),
-                    DepartmentId = 2,
-                    Active = false,
+                    Name = "Milk",
+                    Price = 0.8m,
+                    CategoryId = 2,
+                    Quantity = 10,
+                    ExpirationDate = new DateTime(2024, 12, 31)
                 }
-
-                ); ;
-
+            );
         }
     }
 }
