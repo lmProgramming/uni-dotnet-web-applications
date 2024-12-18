@@ -44,7 +44,9 @@
 			@Html.DisplayNameFor(model => model.ImagePath)
         </dt>
 		<dd class="col-sm-10">
-			<img src="@Model.ImagePath" alt="@Model.Name" style="max-height: 50px; max-width: 50px;" />
+            <img src="@ImageHelper.GetImagePath(Model.ImagePath)"
+                 alt="@Model.Name"
+                 style="max-width: 100%;" />
 		</dd>
     </dl>
 </div>

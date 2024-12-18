@@ -81,3 +81,5 @@ _[Ss]cripts
 *.ldf
 *.mdf
 *.vs
+wwwroot/images/*
+!wwwroot/images/default.*

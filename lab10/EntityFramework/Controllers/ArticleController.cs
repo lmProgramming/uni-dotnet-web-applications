@@ -125,7 +125,9 @@ namespace EntityFramework.Controllers
         // POST: Articles/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price,ExpirationDate,CategoryId,Quantity")] Article article)
+        public async Task<IActionResult> Edit(
+            int id, 
+            [Bind("Id,Name,Price,ExpirationDate,CategoryId,Quantity,ImagePath")] Article article)
         {
             if (id != article.Id)
             {
@@ -134,7 +136,7 @@ namespace EntityFramework.Controllers
 
             article.Category = await _context.Categories.FindAsync(article.CategoryId);
 
-            ModelState.Clear(); 
+            ModelState.Clear();
             TryValidateModel(article);
 
             if (ModelState.IsValid)
@@ -157,10 +159,11 @@ namespace EntityFramework.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            // Repopulate dropdown in case of an error
+
             ViewBag.CategoryId = new SelectList(_context.Categories, "Id", "Name", article.CategoryId);
             return View(article);
         }
+
 
         // GET: Students/Delete/5
         public async Task<IActionResult> Delete(int? id)

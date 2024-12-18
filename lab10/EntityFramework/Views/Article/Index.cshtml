@@ -26,7 +26,7 @@
         {
             <tr>
                 <td>
-                    <img src="@(string.IsNullOrEmpty(item.ImagePath) ? "/images/default.png" : item.ImagePath)"
+                    <img src="@ImageHelper.GetImagePath(item.ImagePath)"
                          alt="@item.Name"
                          style="max-height: 50px; max-width: 50px;" />
                 </td>
@@ -49,7 +49,7 @@
     {
         <div class="col-md-3">
             <div class="card mb-3">
-                <img src="@(string.IsNullOrEmpty(item.ImagePath) ? "/images/default.png" : item.ImagePath)"
+                <img src="@ImageHelper.GetImagePath(item.ImagePath)"
                      alt="@item.Name"
                      style="max-height: 50px; max-width: 50px;" />
                 <div class="card-body">
