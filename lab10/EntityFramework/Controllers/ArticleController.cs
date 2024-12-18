@@ -106,12 +106,12 @@ namespace EntityFramework.Controllers
             if (imageFile != null && imageFile.Length > 0)
             {
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     imageFile.CopyTo(stream);
                 }
-                article.ImagePath = "/images/" + fileName;
+                article.ImagePath = fileName;
             }
         }
 
@@ -203,6 +203,15 @@ namespace EntityFramework.Controllers
             if (article != null)
             {
                 _context.Articles.Remove(article);
+
+                if (article.ImagePath != null)
+                {
+                    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImagePath);
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+                }
             }
 
             await _context.SaveChangesAsync();

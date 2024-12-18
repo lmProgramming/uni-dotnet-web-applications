@@ -4,7 +4,7 @@
     {
         public static string GetImagePath(string? imagePath)
         {
-            return string.IsNullOrEmpty(imagePath) ? "/images/default.png" : imagePath;
+            return "/images/" + (string.IsNullOrEmpty(imagePath) ? "default.png" : imagePath);
         }
     }
 }
