@@ -24,3 +24,17 @@ body {
 .table td, .table th {
     vertical-align: middle;
 }
+
+.fade-hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.fade-hover:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.fade-hover img {
+    transition: transform 0.3s ease-in-out;
+}
