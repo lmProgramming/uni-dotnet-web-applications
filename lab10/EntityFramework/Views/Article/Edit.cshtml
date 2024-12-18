@@ -39,9 +39,9 @@
                 <span asp-validation-for="Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="hidden" asp-for="ImagePath" />
+                <input type="hidden" asp-for="ImageName" />
                 <p>Image</p>
-                <img src="@ImageHelper.GetImagePath(Model.ImagePath)"
+                <img src="@ImageHelper.GetImagePath(Model.ImageName)"
                      alt="@Model.Name"
                 />
             </div>

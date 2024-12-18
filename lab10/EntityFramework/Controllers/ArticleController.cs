@@ -111,7 +111,7 @@ namespace EntityFramework.Controllers
                 {
                     imageFile.CopyTo(stream);
                 }
-                article.ImagePath = fileName;
+                article.ImageName = fileName;
             }
         }
 
@@ -204,9 +204,9 @@ namespace EntityFramework.Controllers
             {
                 _context.Articles.Remove(article);
 
-                if (article.ImagePath != null)
+                if (article.ImageName != null)
                 {
-                    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImagePath);
+                    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImageName);
                     if (System.IO.File.Exists(imagePath))
                     {
                         System.IO.File.Delete(imagePath);

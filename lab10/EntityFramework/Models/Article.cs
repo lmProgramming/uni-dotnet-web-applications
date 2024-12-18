@@ -25,14 +25,14 @@ namespace EntityFramework.Models
         [Range(0, int.MaxValue, ErrorMessage = "Quantity must be at least 0")]
         public int Quantity { get; set; }
 
-        public string? ImagePath { get; set; }
+        public string? ImageName { get; set; }
 
         public Article()
         {
 
         }
 
-        public Article(int id, string name, decimal price, Category category, int quantity, DateTime? expirationDate=null, string? imagePath=null)
+        public Article(int id, string name, decimal price, Category category, int quantity, DateTime? expirationDate=null, string? imageName=null)
         {
             Id = id;
             Name = name;
@@ -40,7 +40,7 @@ namespace EntityFramework.Models
             ExpirationDate = expirationDate;
             Category = category;
             Quantity = quantity;
-            ImagePath = imagePath;
+            ImageName = imageName;
         }
     }
 }
