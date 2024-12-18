@@ -1,6 +1,7 @@
-using WebAsp8RazorDemo.Data;
+using EntityFramework.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace RazorViewsServices
+namespace EntityFramework
 {
     public class Program
     {
@@ -10,8 +11,9 @@ namespace RazorViewsServices
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            //builder.Services.AddSingleton<IArticleContext, MockArticleContext>();
-            builder.Services.AddSingleton<IArticleContext, MockDictionaryArticleContext>();
+            builder.Services.AddDbContextPool<StudentDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MyDb"))
+            );
 
             var app = builder.Build();
 

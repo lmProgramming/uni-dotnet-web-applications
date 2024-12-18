@@ -1,4 +1,4 @@
-namespace RazorViewsServices.Models
+namespace EntityFramework.Models
 {
     public class ErrorViewModel
     {
