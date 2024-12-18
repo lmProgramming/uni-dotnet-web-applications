@@ -17,6 +17,10 @@ namespace EntityFramework.Data
         {
             modelBuilder.Seed();
 
+            modelBuilder.Entity<Article>()
+                .Property(a => a.Price)
+                .HasPrecision(18, 2);
+
             base.OnModelCreating(modelBuilder);
         }
     }

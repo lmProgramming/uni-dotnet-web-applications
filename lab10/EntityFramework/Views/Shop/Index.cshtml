@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EntityFramework.Models.Article>
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<h1>Shop</h1>
+
+<form asp-action="Index" method="get">
+    <label for="category">Select Category:</label>
+    <select id="category" name="categoryId" asp-items="ViewBag.Categories" onchange="this.form.submit()">
+        <option value="">-- All Categories --</option>
+    </select>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Expiration Date</th>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@ImageHelper.GetImagePath(item.ImageName)"
+                         alt="@item.Name"
+                         style="height: 50px; width: 50px; object-fit: fill;" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.ExpirationDate?.ToShortDateString()</td>
+                <td>@item.Category?.Name</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
