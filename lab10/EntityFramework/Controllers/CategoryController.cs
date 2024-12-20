@@ -135,6 +135,8 @@ namespace EntityFramework.Controllers
 
             ViewBag.ArticleCount = articles.Count();
 
+            ViewBag.ArticlesListed = string.Join(',', articles.Select(article => article.Name));
+
             return View(category);
         }
 
@@ -144,6 +146,21 @@ namespace EntityFramework.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var category = await _context.Categories.FindAsync(id);
+
+            var articles = _context.Articles.Where(article => article.Category == category);
+            foreach (var article in articles)
+            {
+                if (article.ImageName == null)
+                {
+                    continue;
+                }
+                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImageName);
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
             if (category != null)
             {
                 _context.Categories.Remove(category);

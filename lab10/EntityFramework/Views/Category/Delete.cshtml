@@ -3,11 +3,12 @@
 @{
     ViewData["Title"] = "Delete";
     int articleCount = ViewBag.ArticleCount;
+    string articlesListed = ViewBag.ArticlesListed;
     string message = articleCount switch
     {
         0 => "No articles use this as their category.",
-        1 => "1 article uses this as its category and will be DELETED!",
-        _ => $"{articleCount} articles use this as their category and will be DELETED!"
+        1 => $"1 article uses this as its category and will be DELETED! It is: {articlesListed}",
+        _ => $"{articleCount} articles use this as their category and will be DELETED! They are: {articlesListed}"
     };
 }
 <h1>Delete</h1>

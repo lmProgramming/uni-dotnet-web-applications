@@ -133,7 +133,7 @@ namespace EntityFramework.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(
             int id, 
-            [Bind("Id,Name,Price,ExpirationDate,CategoryId,Quantity,ImagePath")] Article article)
+            [Bind("Id,Name,Price,ExpirationDate,CategoryId,Quantity,ImageName")] Article article)
         {
             if (id != article.Id)
             {
