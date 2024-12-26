@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Drawing;
 
-namespace RazorCookies.Pages
+namespace RazorCookies.Pages.Game
 {
     public class GameModel : PageModel
     {
