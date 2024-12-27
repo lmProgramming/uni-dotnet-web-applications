@@ -1,3 +1,6 @@
+using EntityFramework.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace RazorCookies
 {
     public class Program
@@ -8,6 +11,9 @@ namespace RazorCookies
 
             // Add services to the container.
             builder.Services.AddSession();
+            builder.Services.AddDbContextPool<ArticleDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MyDb"))
+            );
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
