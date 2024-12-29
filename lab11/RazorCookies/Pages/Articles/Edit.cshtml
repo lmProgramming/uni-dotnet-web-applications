@@ -1,4 +1,5 @@
 ﻿@page
+@using EntityFramework.Utilities
 @model RazorCookies.Pages.Articles.EditModel
 
 @{
@@ -21,12 +22,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Article.Price" class="control-label"></label>
-                <input asp-for="Article.Price" class="form-control" />
+                <input asp-for="Article.Price" class="form-control" type="number" step="0.01" lang="pl" />
                 <span asp-validation-for="Article.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Article.ExpirationDate" class="control-label"></label>
-                <input asp-for="Article.ExpirationDate" class="form-control" />
+                <input asp-for="Article.ExpirationDate" class="form-control" type="date" />
                 <span asp-validation-for="Article.ExpirationDate" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -40,9 +41,10 @@
                 <span asp-validation-for="Article.Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Article.ImageName" class="control-label"></label>
-                <input asp-for="Article.ImageName" class="form-control" />
-                <span asp-validation-for="Article.ImageName" class="text-danger"></span>
+                <input type="hidden" asp-for="Article.ImageName" />
+                <p>Image</p>
+                <img src="@ImageHelper.GetImagePath(Model.Article.ImageName)"
+                     alt="@Model.Article.Name" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -52,7 +54,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
 </div>
 
 @section Scripts {

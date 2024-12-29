@@ -15,9 +15,11 @@ namespace EntityFramework.Models
         public decimal Price { get; set; }
 
         [DataType(DataType.DateTime)]
+        [Display(Name = "Expiration Date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? ExpirationDate { get; set; }
 
+        [Display(Name = "Category")]
         public int CategoryId { get; set; } 
         public Category Category { get; set; }
 

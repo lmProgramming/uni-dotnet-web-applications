@@ -30,13 +30,13 @@ namespace RazorCookies.Pages.Articles
                 return NotFound();
             }
 
-            var article =  await _context.Articles.FirstOrDefaultAsync(m => m.Id == id);
+            var article =  await _context.Articles.Include(a => a.Category).FirstOrDefaultAsync(m => m.Id == id);
             if (article == null)
             {
                 return NotFound();
             }
             Article = article;
-           ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
             return Page();
         }
 
@@ -44,6 +44,11 @@ namespace RazorCookies.Pages.Articles
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Article.Category = await _context.Categories.FindAsync(Article.CategoryId);
+
+            ModelState.Clear();
+            TryValidateModel(Article);
+
             if (!ModelState.IsValid)
             {
                 return Page();
