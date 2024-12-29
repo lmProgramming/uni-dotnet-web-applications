@@ -15,6 +15,7 @@ namespace RazorCookies
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MyDb"))
             );
             builder.Services.AddRazorPages();
+            builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
@@ -36,6 +37,14 @@ namespace RazorCookies
             app.UseAuthorization();
 
             app.MapRazorPages();
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            app.MapGet("/", context => {
+                context.Response.Redirect("/Index");
+                return Task.CompletedTask;
+            });
 
             app.Run();
         }
