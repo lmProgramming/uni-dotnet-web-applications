@@ -18,7 +18,7 @@ namespace RazorCookies.Controllers
         public async Task<IActionResult> Index(int? categoryId)
         {
             var categories = await _context.Categories.ToListAsync();
-            if (categoryId is null) 
+            if (categoryId is null)
             {
                 ViewBag.Categories = new SelectList(categories, "Id", "Name");
             }
@@ -65,10 +65,12 @@ namespace RazorCookies.Controllers
                     var article = _context.Articles.FirstOrDefault(a => a.Id == articleId);
                     if (article != null)
                     {
-                        cartItems.Add(new CartItem { Article = article, Quantity = quantity });
+                        cartItems.Add(new CartItem(article, quantity));
                     }
                 }
             }
+
+            cartItems.Sort((c1, c2) => string.Compare(c1.Article.Name, c2.Article.Name, StringComparison.Ordinal));
 
             return View(cartItems);
         }
@@ -78,7 +80,7 @@ namespace RazorCookies.Controllers
             string cookieKey = $"article{articleId}";
             if (Request.Cookies.ContainsKey(cookieKey))
             {
-                int currentQuantity = int.Parse(Request.Cookies[cookieKey]);
+                int currentQuantity = int.Parse(Request.Cookies[cookieKey]!);
                 Response.Cookies.Append(cookieKey, (currentQuantity + 1).ToString(), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
             }
 
@@ -90,7 +92,7 @@ namespace RazorCookies.Controllers
             string cookieKey = $"article{articleId}";
             if (Request.Cookies.ContainsKey(cookieKey))
             {
-                int currentQuantity = int.Parse(Request.Cookies[cookieKey]);
+                int currentQuantity = int.Parse(Request.Cookies[cookieKey]!);
                 if (currentQuantity > 1)
                 {
                     Response.Cookies.Append(cookieKey, (currentQuantity - 1).ToString(), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
@@ -118,6 +120,12 @@ namespace RazorCookies.Controllers
 
     public class CartItem
     {
+        public CartItem(Article article, int quantity)
+        {
+            Article = article;
+            Quantity = quantity;
+        }
+
         public Article Article { get; set; }
         public int Quantity { get; set; }
     }

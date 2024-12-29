@@ -20,7 +20,6 @@ else
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -34,13 +33,20 @@ else
                     </td>
                     <td>@item.Article.Name</td>
                     <td>@item.Article.Price</td>
-                    <td>@item.Quantity</td>
-                    <td>@(item.Article.Price * item.Quantity)</td>
                     <td>
-                        <a asp-action="IncreaseQuantity" asp-route-articleId="@item.Article.Id">+</a>
-                        <a asp-action="DecreaseQuantity" asp-route-articleId="@item.Article.Id">-</a>
-                        <a asp-action="RemoveFromCart" asp-route-articleId="@item.Article.Id">Remove</a>
+                        <a asp-action="DecreaseQuantity" asp-route-articleId="@item.Article.Id" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-dash" style="font-size: 1.2rem;"></i>
+                        </a>
+                        @item.Quantity
+                        <a asp-action="IncreaseQuantity" asp-route-articleId="@item.Article.Id" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-plus" style="font-size: 1.2rem;"></i>
+                        </a>
+                        |
+                        <a asp-action="RemoveFromCart" asp-route-articleId="@item.Article.Id" class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-trash" style="font-size: 1.2rem;"></i>
+                        </a>
                     </td>
+                    <td>@(item.Article.Price * item.Quantity)</td>
                 </tr>
             }
         </tbody>
