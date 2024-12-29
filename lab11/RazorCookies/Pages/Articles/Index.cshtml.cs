@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EntityFramework.Data;
 using EntityFramework.Models;
@@ -12,9 +7,9 @@ namespace RazorCookies.Pages.Articles
 {
     public class IndexModel : PageModel
     {
-        private readonly EntityFramework.Data.ArticleDbContext _context;
+        private readonly ArticleDbContext _context;
 
-        public IndexModel(EntityFramework.Data.ArticleDbContext context)
+        public IndexModel(ArticleDbContext context)
         {
             _context = context;
         }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,9 +9,9 @@ namespace RazorCookies.Pages.Articles
 {
     public class EditModel : PageModel
     {
-        private readonly EntityFramework.Data.ArticleDbContext _context;
+        private readonly ArticleDbContext _context;
 
-        public EditModel(EntityFramework.Data.ArticleDbContext context)
+        public EditModel(ArticleDbContext context)
         {
             _context = context;
         }

@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using EntityFramework.Data;
 using EntityFramework.Models;
+using static EntityFramework.Utilities.ImageHelper;
 
 namespace RazorCookies.Pages.Articles
 {
     public class CreateModel : PageModel
     {
-        private readonly EntityFramework.Data.ArticleDbContext _context;
+        private readonly ArticleDbContext _context;
 
-        public CreateModel(EntityFramework.Data.ArticleDbContext context)
+        public CreateModel(ArticleDbContext context)
         {
             _context = context;
         }
@@ -28,13 +25,24 @@ namespace RazorCookies.Pages.Articles
         [BindProperty]
         public Article Article { get; set; } = default!;
 
+        [BindProperty]
+        public IFormFile? ImageFile { get; set; }
+
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            Article.Category = (await _context.Categories.FindAsync(Article.CategoryId))!;
+
+            ModelState.Clear();
+            TryValidateModel(Article);
+
             if (!ModelState.IsValid)
             {
+                ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
                 return Page();
             }
+
+            SaveArticleImage(Article, ImageFile);
 
             _context.Articles.Add(Article);
             await _context.SaveChangesAsync();

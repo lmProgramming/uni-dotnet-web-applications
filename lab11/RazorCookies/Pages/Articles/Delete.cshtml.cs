@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EntityFramework.Data;
@@ -12,9 +8,9 @@ namespace RazorCookies.Pages.Articles
 {
     public class DeleteModel : PageModel
     {
-        private readonly EntityFramework.Data.ArticleDbContext _context;
+        private readonly ArticleDbContext _context;
 
-        public DeleteModel(EntityFramework.Data.ArticleDbContext context)
+        public DeleteModel(ArticleDbContext context)
         {
             _context = context;
         }
