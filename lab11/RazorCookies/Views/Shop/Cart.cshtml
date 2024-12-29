@@ -1,0 +1,50 @@
+@model IEnumerable<RazorCookies.Controllers.CartItem>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<h1>Shopping Cart</h1>
+
+@if (!Model.Any())
+{
+    <p>Your cart is empty.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@ImageHelper.GetImagePath(item.Article.ImageName)"
+                             alt="@item.Article.Name"
+                             style="height: 50px; width: 50px; object-fit: fill;" />
+                    </td>
+                    <td>@item.Article.Name</td>
+                    <td>@item.Article.Price</td>
+                    <td>@item.Quantity</td>
+                    <td>@(item.Article.Price * item.Quantity)</td>
+                    <td>
+                        <a asp-action="IncreaseQuantity" asp-route-articleId="@item.Article.Id">+</a>
+                        <a asp-action="DecreaseQuantity" asp-route-articleId="@item.Article.Id">-</a>
+                        <a asp-action="RemoveFromCart" asp-route-articleId="@item.Article.Id">Remove</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Total: @Model.Sum(item => item.Article.Price * item.Quantity)</h3>
+}

@@ -41,6 +41,12 @@ namespace RazorCookies
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.MapControllerRoute(
+                name: "shop_mvc",
+                pattern: "MvcShop/{action=Index}/{id?}",
+                defaults: new { controller = "Shop" }
+            );
+
             app.MapGet("/", context => {
                 context.Response.Redirect("/Index");
                 return Task.CompletedTask;

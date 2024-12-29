@@ -36,5 +36,89 @@ namespace RazorCookies.Controllers
 
             return View(await articles.ToListAsync());
         }
+
+        public IActionResult AddToCart(int articleId)
+        {
+            string cookieKey = $"article{articleId}";
+            if (Request.Cookies.ContainsKey(cookieKey))
+            {
+                int currentQuantity = int.Parse(Request.Cookies[cookieKey]!);
+                Response.Cookies.Append(cookieKey, (currentQuantity + 1).ToString(), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
+            }
+            else
+            {
+                Response.Cookies.Append(cookieKey, "1", new CookieOptions { Expires = DateTime.Now.AddDays(7) });
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Cart()
+        {
+            var cartItems = new List<CartItem>();
+            foreach (var cookie in Request.Cookies)
+            {
+                if (cookie.Key.StartsWith("article"))
+                {
+                    int articleId = int.Parse(cookie.Key.Replace("article", ""));
+                    int quantity = int.Parse(cookie.Value);
+                    var article = _context.Articles.FirstOrDefault(a => a.Id == articleId);
+                    if (article != null)
+                    {
+                        cartItems.Add(new CartItem { Article = article, Quantity = quantity });
+                    }
+                }
+            }
+
+            return View(cartItems);
+        }
+
+        public IActionResult IncreaseQuantity(int articleId)
+        {
+            string cookieKey = $"article{articleId}";
+            if (Request.Cookies.ContainsKey(cookieKey))
+            {
+                int currentQuantity = int.Parse(Request.Cookies[cookieKey]);
+                Response.Cookies.Append(cookieKey, (currentQuantity + 1).ToString(), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
+            }
+
+            return RedirectToAction("Cart");
+        }
+
+        public IActionResult DecreaseQuantity(int articleId)
+        {
+            string cookieKey = $"article{articleId}";
+            if (Request.Cookies.ContainsKey(cookieKey))
+            {
+                int currentQuantity = int.Parse(Request.Cookies[cookieKey]);
+                if (currentQuantity > 1)
+                {
+                    Response.Cookies.Append(cookieKey, (currentQuantity - 1).ToString(), new CookieOptions { Expires = DateTime.Now.AddDays(7) });
+                }
+                else
+                {
+                    Response.Cookies.Delete(cookieKey);
+                }
+            }
+
+            return RedirectToAction("Cart");
+        }
+
+        public IActionResult RemoveFromCart(int articleId)
+        {
+            string cookieKey = $"article{articleId}";
+            if (Request.Cookies.ContainsKey(cookieKey))
+            {
+                Response.Cookies.Delete(cookieKey);
+            }
+
+            return RedirectToAction("Cart");
+        }
+    }
+
+    public class CartItem
+    {
+        public Article Article { get; set; }
+        public int Quantity { get; set; }
     }
 }

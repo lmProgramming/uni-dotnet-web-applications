@@ -23,6 +23,7 @@
             <th>Expiration Date</th>
             <th>Category</th>
             <th>Quantity</th>
+            <th>Add to Cart</th>
         </tr>
     </thead>
     <tbody>
@@ -39,6 +40,9 @@
                 <td>@item.ExpirationDate?.ToShortDateString()</td>
                 <td>@item.Category?.Name</td>
                 <td>@item.Quantity</td>
+                <td>
+                    <a asp-action="AddToCart" asp-route-articleId="@item.Id">Add to Cart</a>
+                </td>
             </tr>
         }
     </tbody>
