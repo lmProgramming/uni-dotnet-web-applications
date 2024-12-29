@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RazorCookies.styles.css" asp-append-version="true" />
+    <style>
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,14 +33,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Game/Index">Game</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Articles/Index">Articles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Categories/Index">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Shop/Index">Shop</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="razorPagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Razor Pages
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="razorPagesDropdown">
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Articles/Index">Articles</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Categories/Index">Categories</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Shop/Index">Shop</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
