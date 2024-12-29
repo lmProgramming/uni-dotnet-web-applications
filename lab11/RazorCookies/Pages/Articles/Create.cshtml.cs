@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using EntityFramework.Data;
-using EntityFramework.Models;
-using static EntityFramework.Utilities.ImageHelper;
+using static RazorCookies.Utilities.ImageHelper;
+using RazorCookies.Data;
+using RazorCookies.Models;
 
 namespace RazorCookies.Pages.Articles
 {

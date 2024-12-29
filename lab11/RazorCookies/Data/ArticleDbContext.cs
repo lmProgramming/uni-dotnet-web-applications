@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using EntityFramework.Models;
+using RazorCookies.Models;
 
-namespace EntityFramework.Data
+namespace RazorCookies.Data
 {
     public class ArticleDbContext : DbContext
     {

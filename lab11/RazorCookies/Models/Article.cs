@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EntityFramework.Models
+namespace RazorCookies.Models
 {
     public class Article
     {
@@ -20,13 +20,14 @@ namespace EntityFramework.Models
         public DateTime? ExpirationDate { get; set; }
 
         [Display(Name = "Category")]
-        public int CategoryId { get; set; } 
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
 
 
         [Range(0, int.MaxValue, ErrorMessage = "Quantity must be at least 0")]
         public int Quantity { get; set; }
 
+        [Display(Name = "Image")]
         public string? ImageName { get; set; }
 
         public Article()
@@ -34,7 +35,7 @@ namespace EntityFramework.Models
 
         }
 
-        public Article(int id, string name, decimal price, Category category, int quantity, DateTime? expirationDate=null, string? imageName=null)
+        public Article(int id, string name, decimal price, Category category, int quantity, DateTime? expirationDate = null, string? imageName = null)
         {
             Id = id;
             Name = name;

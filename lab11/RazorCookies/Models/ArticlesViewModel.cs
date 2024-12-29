@@ -1,4 +1,4 @@
-﻿namespace EntityFramework.Models
+﻿namespace RazorCookies.Models
 {
     public class ArticlesViewModel(IEnumerable<Article> articles)
     {

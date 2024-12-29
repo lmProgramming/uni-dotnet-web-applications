@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using EntityFramework.Data;
-using EntityFramework.Models;
+using RazorCookies.Data;
+using RazorCookies.Models;
 
 namespace RazorCookies.Pages.Articles
 {

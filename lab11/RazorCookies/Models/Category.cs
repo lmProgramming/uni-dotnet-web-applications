@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EntityFramework.Models
+namespace RazorCookies.Models
 {
     public class Category
     {

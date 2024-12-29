@@ -1,5 +1,5 @@
-using EntityFramework.Data;
 using Microsoft.EntityFrameworkCore;
+using RazorCookies.Data;
 
 namespace RazorCookies
 {

@@ -1,6 +1,6 @@
-﻿using EntityFramework.Models;
+﻿using RazorCookies.Models;
 
-namespace EntityFramework.Utilities
+namespace RazorCookies.Utilities
 {
     public static class ImageHelper
     {

@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EntityFramework.Models
+namespace RazorCookies.Models
 {
     public class StudentCreateViewModel
-    { 
+    {
         public int Id { get; set; }
 
         [MinLength(2, ErrorMessage = "Too short name")]
