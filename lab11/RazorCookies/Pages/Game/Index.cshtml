@@ -1,0 +1,47 @@
+﻿@page
+@model GameModel
+@{
+    ViewData["Title"] = "Number Guessing Game";
+}
+
+<h1 class="text-center mb-4">Number Guessing Game</h1>
+
+<div class="alert text-center" style="color: @Model.TextColor; font-weight: @Model.FontWeight;">
+    @Model.Result
+</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <form method="post" asp-page-handler="Set" class="row g-3">
+            <div class="col-md-8">
+                <label class="form-label">Set Range (n):</label>
+                <input type="number" name="n" class="form-control" placeholder="Enter range" required />
+            </div>
+            <div class="col-md-4 align-self-end">
+                <button type="submit" class="btn btn-primary w-100">Set</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-body text-center">
+        <form method="post" asp-page-handler="Draw">
+            <button type="submit" class="btn btn-warning">Draw New Number</button>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post" asp-page-handler="Guess" class="row g-3">
+            <div class="col-md-8">
+                <label class="form-label">Make a Guess:</label>
+                <input type="number" name="guess" class="form-control" placeholder="Enter your guess" required />
+            </div>
+            <div class="col-md-4 align-self-end">
+                <button type="submit" class="btn btn-success w-100">Guess</button>
+            </div>
+        </form>
+    </div>
+</div>
