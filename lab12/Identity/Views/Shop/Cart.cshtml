@@ -1,0 +1,56 @@
+@model IEnumerable<RazorCookies.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<h1>Shopping Cart</h1>
+
+@if (!Model.Any())
+{
+    <p>Your cart is empty.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@ImageHelper.GetImagePath(item.Article.ImageName)"
+                             alt="@item.Article.Name"
+                             style="height: 50px; width: 50px; object-fit: fill;" />
+                    </td>
+                    <td>@item.Article.Name</td>
+                    <td>@item.Article.Price</td>
+                    <td>
+                        <a asp-action="DecreaseQuantity" asp-route-articleId="@item.Article.Id" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-dash" style="font-size: 1.2rem;"></i>
+                        </a>
+                        @item.Quantity
+                        <a asp-action="IncreaseQuantity" asp-route-articleId="@item.Article.Id" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-plus" style="font-size: 1.2rem;"></i>
+                        </a>
+                        |
+                        <a asp-action="RemoveFromCart" asp-route-articleId="@item.Article.Id" class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-trash" style="font-size: 1.2rem;"></i>
+                        </a>
+                    </td>
+                    <td>@(item.Article.Price * item.Quantity)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h3>Total: @Model.Sum(item => item.Article.Price * item.Quantity)</h3>
+}

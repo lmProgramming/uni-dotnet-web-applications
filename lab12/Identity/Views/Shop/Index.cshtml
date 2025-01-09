@@ -1,0 +1,54 @@
+﻿@model IEnumerable<RazorCookies.Models.Article>
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<h1>Shop</h1>
+
+<form asp-action="Index" method="get">
+    <label for="category">Select Category:</label>
+    <select id="category" name="categoryId" asp-items="ViewBag.Categories" onchange="this.form.submit()">
+        <option value="">-- All Categories --</option>
+    </select>
+</form>
+
+<a asp-area="" asp-controller="Shop" asp-action="Cart" class="btn btn-primary">
+    <i class="bi bi-cart"></i> Go to Cart
+</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Expiration Date</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Add to Cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@ImageHelper.GetImagePath(item.ImageName)"
+                         alt="@item.Name"
+                         style="height: 50px; width: 50px; object-fit: fill;" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.ExpirationDate?.ToShortDateString()</td>
+                <td>@item.Category?.Name</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a asp-action="AddToCart" asp-route-articleId="@item.Id" class="btn btn-primary">
+                        <i class="bi bi-cart"></i> Add to Cart
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

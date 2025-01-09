@@ -1,0 +1,96 @@
+﻿@model IEnumerable<RazorCookies.Models.Article>
+
+@{
+    ViewData["Title"] = "Index";
+    var viewMode = ViewBag.ViewMode as string ?? "Table";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-lg"></i> Create New
+    </a>
+</p>
+
+<form asp-action="ToggleViewMode" method="post">
+    <button type="submit" class="btn btn-secondary">
+        Toggle to @(viewMode == "Table" ? "Card" : "Table") View
+    </button>
+</form>
+
+@if (viewMode == "Table")
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Price)</th>
+                <th>@Html.DisplayNameFor(model => model.ExpirationDate)</th>
+                <th>@Html.DisplayNameFor(model => model.Category)</th>
+                <th>@Html.DisplayNameFor(model => model.Quantity)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@ImageHelper.GetImagePath(item.ImageName)"
+                             alt="@item.Name"
+                             style="height: 50px; width: 50px; object-fit: fill;" />
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ExpirationDate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Category.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <br />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 fade-hover shadow-sm rounded">
+                <div class="card mb-3">
+                    <img src="@ImageHelper.GetImagePath(item.ImageName)"
+                         alt="@item.Name"
+                         class="card-img-top rounded"
+                         style="height: 150px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">Price: @item.Price</p>
+                        <p class="card-text">Quantity: @item.Quantity</p>
+
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@section UnderBody
+{
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+        TempData.Remove("ErrorMessage");
+    }
+}
