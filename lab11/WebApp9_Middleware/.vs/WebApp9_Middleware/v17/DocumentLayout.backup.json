@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\middlewares\\errorpagemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\middlewares\\errorpagemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\middlewares\\browsertypemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\middlewares\\browsertypemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\middlewares\\blockmsedge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\middlewares\\blockmsedge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\middlewares\\catchmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\middlewares\\catchmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|c:\\users\\dariu\\source\\repos\\webapp9_middleware\\webapp9_middleware\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57480F1C-6938-4D90-99DC-ABBD9AB96D84}|WebApp9_Middleware\\WebApp9_Middleware.csproj|solutionrelative:webapp9_middleware\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorPageMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\ErrorPageMiddleware.cs",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Middlewares\\ErrorPageMiddleware.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\ErrorPageMiddleware.cs",
+              "RelativeToolTip": "WebApp9_Middleware\\Middlewares\\ErrorPageMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:02:22.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BrowserTypeMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\BrowserTypeMiddleware.cs",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Middlewares\\BrowserTypeMiddleware.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\BrowserTypeMiddleware.cs",
+              "RelativeToolTip": "WebApp9_Middleware\\Middlewares\\BrowserTypeMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T15:49:05.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlockMsEdge.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\BlockMsEdge.cs",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Middlewares\\BlockMsEdge.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\BlockMsEdge.cs",
+              "RelativeToolTip": "WebApp9_Middleware\\Middlewares\\BlockMsEdge.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T15:37:52.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Program.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Program.cs",
+              "RelativeToolTip": "WebApp9_Middleware\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T15:31:41.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApp9_Middleware\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T15:30:56.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CatchMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\CatchMiddleware.cs",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Middlewares\\CatchMiddleware.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Middlewares\\CatchMiddleware.cs",
+              "RelativeToolTip": "WebApp9_Middleware\\Middlewares\\CatchMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T15:28:34.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp9_Middleware\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_Middleware\\WebApp9_Middleware\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApp9_Middleware\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T15:20:17.007Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

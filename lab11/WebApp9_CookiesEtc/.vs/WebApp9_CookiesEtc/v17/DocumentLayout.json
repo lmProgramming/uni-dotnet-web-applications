@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|c:\\users\\dariu\\source\\repos\\webapp9_cookiesetc\\webapp9_cookiesetc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|solutionrelative:webapp9_cookiesetc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|c:\\users\\dariu\\source\\repos\\webapp9_cookiesetc\\webapp9_cookiesetc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|solutionrelative:webapp9_cookiesetc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|c:\\users\\dariu\\source\\repos\\webapp9_cookiesetc\\webapp9_cookiesetc\\controllers\\cookiesessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|solutionrelative:webapp9_cookiesetc\\controllers\\cookiesessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|c:\\users\\dariu\\source\\repos\\webapp9_cookiesetc\\webapp9_cookiesetc\\webapp9_cookiesetc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8E8703E3-1E9D-4BD5-81B1-684EF5AD051E}|WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj|solutionrelative:webapp9_cookiesetc\\webapp9_cookiesetc.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApp9_CookiesEtc\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApp9_CookiesEtc\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T16:25:38.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CookieSessionController.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\Controllers\\CookieSessionController.cs",
+              "RelativeDocumentMoniker": "WebApp9_CookiesEtc\\Controllers\\CookieSessionController.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\Controllers\\CookieSessionController.cs",
+              "RelativeToolTip": "WebApp9_CookiesEtc\\Controllers\\CookieSessionController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA3wCIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:23:11.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WebApp9_CookiesEtc.csproj",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj",
+              "RelativeDocumentMoniker": "WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj",
+              "RelativeToolTip": "WebApp9_CookiesEtc\\WebApp9_CookiesEtc.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-17T13:35:31.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\Program.cs",
+              "RelativeDocumentMoniker": "WebApp9_CookiesEtc\\Program.cs",
+              "ToolTip": "C:\\Users\\dariu\\source\\repos\\WebApp9_CookiesEtc\\WebApp9_CookiesEtc\\Program.cs",
+              "RelativeToolTip": "WebApp9_CookiesEtc\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:08:02.832Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
