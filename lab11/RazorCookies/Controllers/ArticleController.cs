@@ -3,6 +3,7 @@ using RazorCookies.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using RazorCookies.Utilities;
 
 namespace EntityFramework.Controllers
 {
@@ -196,19 +197,21 @@ namespace EntityFramework.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var article = await _context.Articles.FindAsync(id);
-            if (article != null)
-            {
-                _context.Articles.Remove(article);
 
-                if (article.ImageName != null)
-                {
-                    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImageName);
-                    if (System.IO.File.Exists(imagePath))
-                    {
-                        System.IO.File.Delete(imagePath);
-                    }
-                }
+            if (article == null)
+            {
+                return RedirectToAction(nameof(Index));
             }
+
+            string cookieKey = $"article{article.Id}";
+            if (Request.Cookies.ContainsKey(cookieKey))
+            {
+                Response.Cookies.Delete(cookieKey);
+            }
+
+            _context.Articles.Remove(article);
+
+            ImageHelper.DeleteArticleImage(article);
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorCookies.Data;
 using RazorCookies.Models;
+using RazorCookies.Utilities;
 
 namespace EntityFramework.Controllers
 {
@@ -150,15 +151,13 @@ namespace EntityFramework.Controllers
             var articles = _context.Articles.Where(article => article.Category == category);
             foreach (var article in articles)
             {
-                if (article.ImageName == null)
+                string cookieKey = $"article{article.Id}";
+                if (Request.Cookies.ContainsKey(cookieKey))
                 {
-                    continue;
+                    Response.Cookies.Delete(cookieKey);
                 }
-                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImageName);
-                if (System.IO.File.Exists(imagePath))
-                {
-                    System.IO.File.Delete(imagePath);
-                }
+
+                ImageHelper.DeleteArticleImage(article);
             }
 
             if (category != null)

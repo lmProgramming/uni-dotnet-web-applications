@@ -22,5 +22,17 @@ namespace RazorCookies.Utilities
                 article.ImageName = fileName;
             }
         }
+
+        public static void DeleteArticleImage(Article article)
+        {
+            if (article.ImageName != null)
+            {
+                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", article.ImageName);
+                if (File.Exists(imagePath))
+                {
+                    File.Delete(imagePath);
+                }
+            }
+        }
     }
 }
