@@ -9,11 +9,11 @@ namespace Identity.Controllers
 {
     [Route("api/category")]
     [ApiController]
-    public class CategoriesApiController : ControllerBase
+    public class CategoryApiController : ControllerBase
     {
         private readonly ArticleDbContext _context;
 
-        public CategoriesApiController(ArticleDbContext context)
+        public CategoryApiController(ArticleDbContext context)
         {
             _context = context;
         }

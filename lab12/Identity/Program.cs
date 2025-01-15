@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Identity.Data;
+using Microsoft.OpenApi.Models;
 
 internal class Program
 {
@@ -37,6 +38,11 @@ internal class Program
                 policy.RequireAssertion(context =>
                     !context.User.IsInRole("Admin")));
 
+        builder.Services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+        });
+
         var app = builder.Build();
 
         if (!app.Environment.IsDevelopment())
@@ -53,6 +59,12 @@ internal class Program
         app.UseRouting();
         app.UseCors();
         app.UseAuthorization();
+
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
+        {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        });
 
         using (var scope = app.Services.CreateScope())
         {
