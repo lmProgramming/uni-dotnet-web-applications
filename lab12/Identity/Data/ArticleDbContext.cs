@@ -1,19 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RazorCookies.Models;
+﻿using Identity.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
-namespace RazorCookies.Data
+namespace Identity.Data
 {
-    public class ArticleDbContext : DbContext
+    public class ArticleDbContext : IdentityDbContext
     {
-        public DbSet<Article> Articles { get; set; }
-        public DbSet<Category> Categories { get; set; }
-
         public ArticleDbContext(DbContextOptions<ArticleDbContext> options)
             : base(options)
         {
         }
 
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
+
         {
             modelBuilder.Seed();
 
@@ -24,4 +26,5 @@ namespace RazorCookies.Data
             base.OnModelCreating(modelBuilder);
         }
     }
+
 }

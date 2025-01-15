@@ -1,11 +1,11 @@
-﻿using RazorCookies.Data;
-using RazorCookies.Models;
+﻿using Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RazorCookies.Utilities;
+using Identity.Utilities;
+using Identity.Models;
 
-namespace EntityFramework.Controllers
+namespace Identity.Controllers
 {
     public class ArticleController : Controller
     {
@@ -133,7 +133,7 @@ namespace EntityFramework.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(
-            int id, 
+            int id,
             [Bind("Id,Name,Price,ExpirationDate,CategoryId,Quantity,ImageName")] Article article)
         {
             if (id != article.Id)

@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RazorCookies.Models;
+﻿using Identity.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace RazorCookies.Data
+namespace Identity.Data
 {
     public static class ModelBuilderExtension
     {

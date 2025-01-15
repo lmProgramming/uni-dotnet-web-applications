@@ -1,7 +1,8 @@
+using Identity.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using RazorCookies.Data;
 
-namespace RazorCookies
+namespace Identity
 {
     public class Program
     {
@@ -9,11 +10,17 @@ namespace RazorCookies
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            var connectionString = builder.Configuration.GetConnectionString("MyDB") ?? throw new InvalidOperationException("Connection string 'MyDB' not found.");
+
             // Add services to the container.
-            builder.Services.AddSession();
-            builder.Services.AddDbContextPool<ArticleDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("MyDb"))
-            );
+            builder.Services.AddDbContext<ArticleDbContext>(options =>
+                options.UseSqlServer(connectionString));
+
+            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ArticleDbContext>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
@@ -21,23 +28,22 @@ namespace RazorCookies
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
-            app.UseSession();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages();
 
             app.Run();
         }

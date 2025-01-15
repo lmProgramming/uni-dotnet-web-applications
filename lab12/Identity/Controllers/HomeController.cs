@@ -1,8 +1,8 @@
 using System.Diagnostics;
-using RazorCookies.Models;
+using Identity.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EntityFramework.Controllers
+namespace Identity.Controllers
 {
     public class HomeController : Controller
     {

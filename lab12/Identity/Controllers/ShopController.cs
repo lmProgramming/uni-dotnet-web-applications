@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using RazorCookies.Data;
-using RazorCookies.Models;
+using Identity.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Identity.Models;
 
-namespace RazorCookies.Controllers
+namespace Identity.Controllers
 {
     public class ShopController : Controller
     {

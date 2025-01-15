@@ -1,4 +1,4 @@
-namespace RazorCookies.Models
+namespace Identity.Models
 {
     public class ErrorViewModel
     {

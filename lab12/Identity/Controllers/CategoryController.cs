@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Identity.Models;
+using Identity.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RazorCookies.Data;
-using RazorCookies.Models;
-using RazorCookies.Utilities;
+using Identity.Data;
 
-namespace EntityFramework.Controllers
+namespace Identity.Controllers
 {
     public class CategoryController : Controller
     {

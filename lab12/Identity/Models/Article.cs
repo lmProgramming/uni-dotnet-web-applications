@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RazorCookies.Models
+namespace Identity.Models
 {
     public class Article
     {
