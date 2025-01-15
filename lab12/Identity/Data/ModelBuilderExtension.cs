@@ -8,30 +8,23 @@ namespace Identity.Data
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Bakery" },
-                new Category { Id = 2, Name = "Dairy" }
-            );
+               new Category(4, "Other"),
+               new Category(1, "Food"),
+               new Category(2, "Toys"),
+               new Category(3, "Flowers")
+
+               ); ;
 
             modelBuilder.Entity<Article>().HasData(
-                new Article
-                {
-                    Id = 1,
-                    Name = "Bread",
-                    Price = 1.2m,
-                    CategoryId = 1,
-                    Quantity = 20,
-                    ExpirationDate = new DateTime(2024, 12, 31)
-                },
-                new Article
-                {
-                    Id = 2,
-                    Name = "Milk",
-                    Price = 0.8m,
-                    CategoryId = 2,
-                    Quantity = 10,
-                    ExpirationDate = new DateTime(2024, 12, 31)
-                }
-            );
+                new Article(1, "banana", 1.5m, 1, "/upload/banan.jpg"),
+                new Article(2, "cheese", 2.79m, 1),
+                new Article(3, "barbie", 11.5m, 2, "/upload/barbie.jpg"),
+                new Article(4, "car", 12.79m, 2, "/upload/car.jpg"),
+                new Article(5, "sunflower", 1.5m, 3, "/upload/sunflower.jpg")
+                ); ;
+
+
+
         }
     }
 }

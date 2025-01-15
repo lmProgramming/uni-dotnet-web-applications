@@ -1,6 +1,6 @@
 using System.Diagnostics;
-using Identity.Models;
 using Microsoft.AspNetCore.Mvc;
+using Identity.Models;
 
 namespace Identity.Controllers
 {
