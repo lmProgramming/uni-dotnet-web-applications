@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Identity.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Identity.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 
 namespace Identity.Controllers
 {
@@ -115,6 +117,75 @@ namespace Identity.Controllers
             }
 
             return RedirectToAction("Cart");
+        }
+
+        [Authorize]
+        public IActionResult Order()
+        {
+            var cartItems = new List<(Article Article, int Quantity)>();
+            decimal totalCost = 0;
+
+            foreach (var cookie in Request.Cookies)
+            {
+                if (cookie.Key.StartsWith("article"))
+                {
+                    if (int.TryParse(cookie.Key.AsSpan("article".Length), out int articleId) &&
+                        int.TryParse(cookie.Value, out int quantity))
+                    {
+                        var article = _context.Articles.Include(a => a.Category).FirstOrDefault(a => a.Id == articleId);
+                        if (article != null)
+                        {
+                            cartItems.Add((article, quantity));
+                            totalCost += article.Price * quantity;
+                        }
+                    }
+                }
+            }
+
+            var model = new OrderModel
+            {
+                CartItems = cartItems,
+                TotalCost = totalCost
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult ConfirmOrder(string FullName, string Address, string PaymentMethod)
+        {
+            foreach (var cookie in Request.Cookies.Where(c => c.Key.StartsWith("article")))
+            {
+                Response.Cookies.Delete(cookie.Key);
+            }
+
+            var model = new ConfirmationViewModel
+            {
+                FullName = FullName,
+                Address = Address,
+                PaymentMethod = PaymentMethod
+            };
+
+            return View("OrderConfirmed", model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> LoadArticles(int page = 1, int pageSize = 8)
+        {
+            var articles = await _context.Articles
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(a => new
+                {
+                    a.Id,
+                    a.Name,
+                    a.Price,
+                    a.ImageName,
+                    a.CategoryId
+                })
+                .ToListAsync();
+
+            return Json(articles);
         }
     }
 }
