@@ -6,7 +6,7 @@ namespace Identity.Utilities
     {
         public static string GetImagePath(string? imagePath)
         {
-            return "/images/" + (string.IsNullOrEmpty(imagePath) ? "default.png" : imagePath);
+            return "/images/" + (string.IsNullOrEmpty(imagePath) ? Article.DEFAULT_IMAGE_NAME : imagePath);
         }
 
         public static void SaveArticleImage(Article article, IFormFile? imageFile)

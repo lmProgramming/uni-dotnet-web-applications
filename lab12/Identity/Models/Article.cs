@@ -4,6 +4,8 @@ namespace Identity.Models
 {
     public class Article
     {
+        public const string DEFAULT_IMAGE_NAME = "default.jpg";
+
         public int Id { get; set; }
 
         [MinLength(2, ErrorMessage = "Too short name")]
@@ -37,13 +39,17 @@ namespace Identity.Models
 
         public Article(int id, string name, decimal price, Category category, int quantity, DateTime? expirationDate = null, string? imageName = null)
         {
+            if (imageName == string.Empty)
+            {
+                imageName = null;
+            }
             Id = id;
             Name = name;
             Price = price;
             ExpirationDate = expirationDate;
             Category = category;
             Quantity = quantity;
-            ImageName = imageName;
+            ImageName = imageName ?? DEFAULT_IMAGE_NAME;
         }
     }
 }

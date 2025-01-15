@@ -120,28 +120,6 @@ namespace Identity.Controllers
             return NoContent();
         }
 
-        [HttpPatch("{id}")]
-        // [Authorize(Policy = "RequireRoleForEditing")]
-        public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<Category> patch)
-        {
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
-            {
-                return NotFound();
-            }
-
-            patch.ApplyTo(category);
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            await _context.SaveChangesAsync();
-
-            return Ok(category);
-        }
-
         private bool CategoryExists(int id)
         {
             return _context.Categories.Any(e => e.Id == id);

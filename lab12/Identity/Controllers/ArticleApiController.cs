@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Identity.Utilities;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Identity.Controllers
 {
@@ -71,9 +72,9 @@ namespace Identity.Controllers
             return Ok(articles);
         }
 
-
         // POST: api/article
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Post([FromBody] Article article)
         {
             Debug.WriteLine(article);
@@ -91,6 +92,7 @@ namespace Identity.Controllers
 
         // PUT: api/article/{id}
         [HttpPut("{id}")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Put(int id, [FromBody] Article article)
         {
             if (id != article.Id)
@@ -128,6 +130,7 @@ namespace Identity.Controllers
 
         // DELETE: api/article/{id}
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int id)
         {
             var article = await _context.Articles.FindAsync(id);
@@ -146,27 +149,6 @@ namespace Identity.Controllers
 
             return NoContent();
         }
-
-        [HttpPatch("{id}")]
-        public async Task<IActionResult> Patch(int id, [FromBody] JsonPatchDocument<Article> patch)
-        {
-            var article = await _context.Articles.FindAsync(id);
-            if (article == null)
-            {
-                return NotFound();
-            }
-
-            patch.ApplyTo(article);
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            await _context.SaveChangesAsync();
-            return Ok(article);
-        }
-
 
         // GET: api/article/prev/{id}
         [HttpGet("prev/{id}")]
