@@ -8,7 +8,7 @@
 {
     <li class="nav-item">
             <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-                Hello @(User.IsInRole("Admin") ? "admin " : "")@UserManager.GetUserName(User)!
+                @(User.IsInRole("Admin") ? "Admin " : "Hello ")@UserManager.GetUserName(User)!
             </a>
     </li>
     <li class="nav-item">
