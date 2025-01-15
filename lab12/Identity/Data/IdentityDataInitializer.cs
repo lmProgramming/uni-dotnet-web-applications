@@ -2,7 +2,7 @@
 
 namespace Identity.Data
 {
-    public class MyIdentityDataInitializer
+    public class IdentityDataInitializer
     {
         public static async Task SeedData(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {

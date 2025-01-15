@@ -74,7 +74,7 @@ namespace Identity.Controllers
 
         // POST: api/article
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Post([FromBody] Article article)
         {
             Debug.WriteLine(article);
@@ -84,6 +84,7 @@ namespace Identity.Controllers
                 return BadRequest(ModelState);
             }
 
+            article.Category = await _context.Categories.FirstAsync(c => c.Id == article.CategoryId);
             _context.Articles.Add(article);
             await _context.SaveChangesAsync();
 
@@ -130,7 +131,7 @@ namespace Identity.Controllers
 
         // DELETE: api/article/{id}
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int id)
         {
             var article = await _context.Articles.FindAsync(id);

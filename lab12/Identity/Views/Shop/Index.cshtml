@@ -17,7 +17,7 @@
     <i class="bi bi-cart"></i> Go to Cart
 </a>
 
-<table class="table">
+<table class="table" id="articlesTable">
     <thead>
         <tr>
             <th>Image</th>
@@ -29,7 +29,7 @@
             <th>Add to Cart</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="articlesBody">
         @foreach (var item in Model)
         {
             <tr>
@@ -52,3 +52,21 @@
         }
     </tbody>
 </table>
+
+<script>
+    let page = 1;
+    const loadMoreArticles = () => {
+        page++;
+        fetch(`@Url.Action("LoadArticles", "Shop")?page=${page}&pageSize=5`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('articlesBody').insertAdjacentHTML('beforeend', data);
+            });
+    };
+
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            loadMoreArticles();
+        }
+    });
+</script>

@@ -92,7 +92,7 @@ internal class Program
         {
             var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            await MyIdentityDataInitializer.SeedData(userManager, roleManager);
+            await IdentityDataInitializer.SeedData(userManager, roleManager);
         }
 
         app.MapControllerRoute(

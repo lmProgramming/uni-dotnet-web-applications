@@ -4,7 +4,7 @@ namespace Identity.Models
 {
     public class Article
     {
-        public const string DEFAULT_IMAGE_NAME = "default.jpg";
+        public const string DEFAULT_IMAGE_NAME = "default.png";
 
         public int Id { get; set; }
 
