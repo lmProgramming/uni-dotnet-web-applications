@@ -58,7 +58,8 @@
     let page = 0;
     const loadMoreArticles = () => {
         page++;
-        fetch(`@Url.Action("LoadArticles", "Shop")?page=${page}&pageSize=5`)
+        let categoryId = document.getElementById('category').value;
+        fetch(`@Url.Action("LoadArticles", "Shop")?page=${page}&pageSize=5&categoryId=${categoryId}`)
             .then(response => response.json())
             .then(data => {
                 const articlesBody = document.getElementById('articlesBody');

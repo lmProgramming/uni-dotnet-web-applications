@@ -31,12 +31,7 @@ namespace Identity.Controllers
                 ViewBag.Categories = new SelectList(categories, "Id", "Name", categoryId);
             }
 
-            var articles = await GetArticlesForPage(0, 16);
-
-            if (categoryId.HasValue)
-            {
-                articles = articles.Where(a => a.CategoryId == categoryId.Value);
-            }
+            var articles = await GetArticlesForPage(0, 16, categoryId);
 
             return View(articles);
         }
@@ -205,9 +200,10 @@ namespace Identity.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ArticleDto>> GetArticlesForPage(int page, int pageSize = 16)
+        public async Task<IEnumerable<ArticleDto>> GetArticlesForPage(int page, int pageSize = 16, int? categoryId = null)
         {
             var articles = await _context.Articles
+                .Where(a => categoryId == null || a.CategoryId == categoryId)
                 .Skip(page * pageSize)
                 .Take(pageSize)
                 .Select(a => new ArticleDto
@@ -227,9 +223,9 @@ namespace Identity.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> LoadArticles(int page, int pageSize = 16)
+        public async Task<IActionResult> LoadArticles(int page, int pageSize = 16, int? categoryId = null)
         {
-            var articles = await GetArticlesForPage(page, pageSize);
+            var articles = await GetArticlesForPage(page, pageSize, categoryId);
 
             if (!articles.Any())
             {
