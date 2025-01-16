@@ -153,9 +153,32 @@ namespace Identity.Controllers
             return View(model);
         }
 
+        private IEnumerable<OrderItem> GetOrderItems()
+        {
+            var cartItems = new List<OrderItem>();
+            foreach (var cookie in Request.Cookies)
+            {
+                if (cookie.Key.StartsWith("article"))
+                {
+                    if (int.TryParse(cookie.Key.AsSpan("article".Length), out int articleId) &&
+                        int.TryParse(cookie.Value, out int quantity))
+                    {
+                        var article = _context.Articles.Include(a => a.Category).FirstOrDefault(a => a.Id == articleId);
+                        if (article != null)
+                        {
+                            cartItems.Add(new OrderItem(article, quantity));
+                        }
+                    }
+                }
+            }
+            return cartItems;
+        }
+
         [HttpPost]
         public IActionResult ConfirmOrder(string fullName, string address, string paymentMethod)
         {
+            var cartItems = GetOrderItems();
+
             foreach (var cookie in Request.Cookies.Where(c => c.Key.StartsWith("article")))
             {
                 Response.Cookies.Delete(cookie.Key);
@@ -167,6 +190,16 @@ namespace Identity.Controllers
                 Address = address,
                 PaymentMethod = paymentMethod
             };
+
+            _context.OrderItems.AddRange(cartItems);
+
+            _context.Orders.Add(new Order
+            {
+                FullName = fullName,
+                Address = address,
+                PaymentMethod = paymentMethod,
+                TotalCost = 0
+            });
 
             return View("OrderConfirmed", model);
         }
