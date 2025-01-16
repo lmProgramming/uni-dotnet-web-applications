@@ -1,0 +1,117 @@
+﻿@using Identity.Controllers
+@model IEnumerable<ArticleDto>
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<h1>Shop</h1>
+
+<form asp-action="Index" method="get">
+    <label for="category">Select Category:</label>
+    <select id="category" name="categoryId" asp-items="ViewBag.Categories" onchange="this.form.submit()">
+        <option value="">-- All Categories --</option>
+    </select>
+</form>
+
+<a asp-area="" asp-controller="Shop" asp-action="Cart" class="btn btn-primary">
+    <i class="bi bi-cart"></i> Go to Cart
+</a>
+
+<table class="table" id="articlesTable">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Expiration Date</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Add to Cart</th>
+        </tr>
+    </thead>
+    <tbody id="articlesBody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@item.ImagePath"
+                         alt="@item.Name"
+                         style="height: 50px; width: 50px; object-fit: fill;" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.ExpirationDate?.ToShortDateString()</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a asp-action="AddToCart" asp-route-articleId="@item.Id" class="btn btn-primary">
+                        <i class="bi bi-cart"></i> Add to Cart
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    let page = 0;
+    const loadMoreArticles = () => {
+        page++;
+        let categoryId = document.getElementById('category').value;
+        fetch(`@Url.Action("LoadArticles", "Shop")?page=${page}&pageSize=5&categoryId=${categoryId}`)
+            .then(response => response.json())
+            .then(data => {
+                const articlesBody = document.getElementById('articlesBody');
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+
+                    const imageCell = document.createElement('td');
+                    const img = document.createElement('img');
+                    img.src = item.ImagePath;
+                    img.alt = item.Name;
+                    img.style.height = '50px';
+                    img.style.width = '50px';
+                    img.style.objectFit = 'fill';
+                    imageCell.appendChild(img);
+                    row.appendChild(imageCell);
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = item.Name;
+                    row.appendChild(nameCell);
+
+                    const priceCell = document.createElement('td');
+                    priceCell.textContent = item.Price.toFixed(2);
+                    row.appendChild(priceCell);
+
+                    const expirationDateCell = document.createElement('td');
+                    expirationDateCell.textContent = new Date(item.ExpirationDate).toLocaleDateString();
+                    row.appendChild(expirationDateCell);
+
+                    const categoryCell = document.createElement('td');
+                    categoryCell.textContent = item.CategoryName;
+                    row.appendChild(categoryCell);
+
+                    const quantityCell = document.createElement('td');
+                    quantityCell.textContent = item.Quantity;
+                    row.appendChild(quantityCell);
+
+                    const addToCartCell = document.createElement('td');
+                    const addToCartLink = document.createElement('a');
+                    addToCartLink.href = `@Url.Action("AddToCart", "Shop")?articleId=${item.id}`;
+                    addToCartLink.className = 'btn btn-primary';
+                    addToCartLink.innerHTML = '<i class="bi bi-cart"></i> Add to Cart';
+                    addToCartCell.appendChild(addToCartLink);
+                    row.appendChild(addToCartCell);
+
+                    articlesBody.appendChild(row);
+                });
+            });
+    };
+
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            loadMoreArticles();
+        }
+    });
+</script>
