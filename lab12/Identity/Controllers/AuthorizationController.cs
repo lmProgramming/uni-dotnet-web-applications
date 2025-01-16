@@ -3,6 +3,7 @@ using Identity.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 using Identity.Data;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace Identity.Controllers
@@ -14,6 +15,8 @@ namespace Identity.Controllers
         private readonly ArticleDbContext _context;
         private readonly TokenService _tokenService;
 
+        private readonly PasswordHasher<IdentityUser> _passwordHasher = new PasswordHasher<IdentityUser>();
+
         public AuthController(TokenService tokenService)
         {
             _tokenService = tokenService;
@@ -22,11 +25,15 @@ namespace Identity.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
-            var userId = _context.Users.FirstOrDefault(u => u.UserName == loginModel.Username && u.PasswordHash == loginModel.Password)?.Id;
-            if (userId is not null)
+            var user = _context.Users.FirstOrDefault(u => u.UserName == loginModel.Username);
+            if (user != null)
             {
-                var token = _tokenService.GenerateToken(userId, "Admin");
-                return Ok(new { Token = token });
+                var verificationResult = _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, loginModel.Password);
+                if (verificationResult == PasswordVerificationResult.Success)
+                {
+                    var token = _tokenService.GenerateToken(user.Id, "Admin");
+                    return Ok(new { Token = token });
+                }
             }
 
             return Unauthorized();

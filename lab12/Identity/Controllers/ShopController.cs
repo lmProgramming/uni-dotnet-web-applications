@@ -170,9 +170,9 @@ namespace Identity.Controllers
         }
 
         [HttpPost]
-        public IActionResult ConfirmOrder(string fullName, string address, string paymentMethod)
+        public async Task<IActionResult> ConfirmOrder(string fullName, string address, string paymentMethod)
         {
-            var cartItems = GetOrderItems();
+            var orderItems = GetOrderItems();
 
             foreach (var cookie in Request.Cookies.Where(c => c.Key.StartsWith("article")))
             {
@@ -186,15 +186,18 @@ namespace Identity.Controllers
                 PaymentMethod = paymentMethod
             };
 
-            _context.OrderItems.AddRange(cartItems);
+            _context.OrderItems.AddRange(orderItems);
 
             _context.Orders.Add(new Order
             {
                 FullName = fullName,
                 Address = address,
                 PaymentMethod = paymentMethod,
-                TotalCost = 0
+                TotalCost = orderItems.Sum(c => c.Quantity * c.Article.Price),
+                OrderItems = orderItems.ToList()
             });
+
+            await _context.SaveChangesAsync();
 
             return View("OrderConfirmed", model);
         }

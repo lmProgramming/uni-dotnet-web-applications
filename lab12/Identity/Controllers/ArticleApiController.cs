@@ -74,7 +74,7 @@ namespace Identity.Controllers
 
         // POST: api/article
         [HttpPost]
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Post([FromBody] Article article)
         {
             Debug.WriteLine(article);

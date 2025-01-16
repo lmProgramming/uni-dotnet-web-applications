@@ -48,9 +48,9 @@ internal class Program
         //    };
         //});
 
-        //builder.Services.AddAuthorizationBuilder()
-        //    .AddPolicy("RequireRoleForEditing", policy =>
-        //        policy.RequireRole("Admin"));
+        builder.Services.AddAuthorizationBuilder()
+            .AddPolicy("RequireRoleForEditing", policy =>
+                policy.RequireRole("Admin"));
 
         builder.Services.AddAuthorizationBuilder()
             .AddPolicy("RequireRoleForViewStore", policy =>
