@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Identity.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Identity.Utilities;
+using Microsoft.AspNetCore.JsonPatch.Internal;
 
 namespace Identity.Controllers
 {
@@ -29,14 +31,14 @@ namespace Identity.Controllers
                 ViewBag.Categories = new SelectList(categories, "Id", "Name", categoryId);
             }
 
-            var articles = _context.Articles.Include(a => a.Category).AsQueryable();
+            var articles = await GetArticlesForPage(0, 16);
 
             if (categoryId.HasValue)
             {
                 articles = articles.Where(a => a.CategoryId == categoryId.Value);
             }
 
-            return View(await articles.ToListAsync());
+            return View(articles);
         }
 
         public IActionResult AddToCart(int articleId)
@@ -122,7 +124,7 @@ namespace Identity.Controllers
         [Authorize]
         public IActionResult Order()
         {
-            var cartItems = new List<(Article Article, int Quantity)>();
+            var cartItems = new List<OrderItem>();
             decimal totalCost = 0;
 
             foreach (var cookie in Request.Cookies)
@@ -135,7 +137,7 @@ namespace Identity.Controllers
                         var article = _context.Articles.Include(a => a.Category).FirstOrDefault(a => a.Id == articleId);
                         if (article != null)
                         {
-                            cartItems.Add((article, quantity));
+                            cartItems.Add(new OrderItem(article, quantity));
                             totalCost += article.Price * quantity;
                         }
                     }
@@ -152,7 +154,7 @@ namespace Identity.Controllers
         }
 
         [HttpPost]
-        public IActionResult ConfirmOrder(string FullName, string Address, string PaymentMethod)
+        public IActionResult ConfirmOrder(string fullName, string address, string paymentMethod)
         {
             foreach (var cookie in Request.Cookies.Where(c => c.Key.StartsWith("article")))
             {
@@ -161,31 +163,59 @@ namespace Identity.Controllers
 
             var model = new ConfirmationViewModel
             {
-                FullName = FullName,
-                Address = Address,
-                PaymentMethod = PaymentMethod
+                FullName = fullName,
+                Address = address,
+                PaymentMethod = paymentMethod
             };
 
             return View("OrderConfirmed", model);
         }
 
         [HttpGet]
-        public async Task<IActionResult> LoadArticles(int page = 1, int pageSize = 8)
+        public async Task<IEnumerable<ArticleDto>> GetArticlesForPage(int page, int pageSize = 16)
         {
             var articles = await _context.Articles
-                .Skip((page - 1) * pageSize)
+                .Skip(page * pageSize)
                 .Take(pageSize)
-                .Select(a => new
+                .Select(a => new ArticleDto
                 {
-                    a.Id,
-                    a.Name,
-                    a.Price,
-                    a.ImageName,
-                    a.CategoryId
+                    Id = a.Id,
+                    Name = a.Name,
+                    Price = a.Price,
+                    CategoryId = a.CategoryId,
+                    ExpirationDate = a.ExpirationDate,
+                    Quantity = a.Quantity,
+                    CategoryName = a.Category.Name,
+                    ImagePath = ImageHelper.GetImagePath(a.ImageName)
                 })
                 .ToListAsync();
 
+            return articles;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> LoadArticles(int page, int pageSize = 16)
+        {
+            var articles = await GetArticlesForPage(page, pageSize);
+
+            if (!articles.Any())
+            {
+                return NoContent();
+            }
+
             return Json(articles);
         }
+    }
+
+    public class ArticleDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int CategoryId { get; set; }
+        public DateTime? ExpirationDate { get; set; }
+        public int Quantity { get; set; }
+        public string CategoryName { get; set; }
+        public string ImagePath { get; set; }
     }
 }

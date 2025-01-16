@@ -32,6 +32,20 @@ namespace Identity.Data
                     ExpirationDate = new DateTime(2024, 12, 31)
                 }
             );
+
+            for (int i = 10; i < 500; i++)
+            {
+                modelBuilder.Entity<Article>().HasData(
+                new Article
+                {
+                    Id = i,
+                    Name = $"Item {i}",
+                    Price = 1.2m,
+                    CategoryId = 2,
+                    Quantity = 20,
+                    ExpirationDate = new DateTime(2024, 12, 31)
+                });
+            }
         }
     }
 }

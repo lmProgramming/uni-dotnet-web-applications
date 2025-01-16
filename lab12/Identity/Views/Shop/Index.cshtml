@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Article>
+﻿@using Identity.Controllers
+@model IEnumerable<ArticleDto>
 
 @{
     ViewData["Title"] = "Shop";
@@ -34,14 +35,14 @@
         {
             <tr>
                 <td>
-                    <img src="@ImageHelper.GetImagePath(item.ImageName)"
+                    <img src="@item.ImagePath"
                          alt="@item.Name"
                          style="height: 50px; width: 50px; object-fit: fill;" />
                 </td>
                 <td>@item.Name</td>
                 <td>@item.Price</td>
                 <td>@item.ExpirationDate?.ToShortDateString()</td>
-                <td>@item.Category?.Name</td>
+                <td>@item.CategoryName</td>
                 <td>@item.Quantity</td>
                 <td>
                     <a asp-action="AddToCart" asp-route-articleId="@item.Id" class="btn btn-primary">
@@ -54,13 +55,56 @@
 </table>
 
 <script>
-    let page = 1;
+    let page = 0;
     const loadMoreArticles = () => {
         page++;
         fetch(`@Url.Action("LoadArticles", "Shop")?page=${page}&pageSize=5`)
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                document.getElementById('articlesBody').insertAdjacentHTML('beforeend', data);
+                const articlesBody = document.getElementById('articlesBody');
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+
+                    const imageCell = document.createElement('td');
+                    const img = document.createElement('img');
+                    img.src = item.ImagePath;
+                    img.alt = item.Name;
+                    img.style.height = '50px';
+                    img.style.width = '50px';
+                    img.style.objectFit = 'fill';
+                    imageCell.appendChild(img);
+                    row.appendChild(imageCell);
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = item.Name;
+                    row.appendChild(nameCell);
+
+                    const priceCell = document.createElement('td');
+                    priceCell.textContent = item.Price.toFixed(2);
+                    row.appendChild(priceCell);
+
+                    const expirationDateCell = document.createElement('td');
+                    expirationDateCell.textContent = new Date(item.ExpirationDate).toLocaleDateString();
+                    row.appendChild(expirationDateCell);
+
+                    const categoryCell = document.createElement('td');
+                    categoryCell.textContent = item.CategoryName;
+                    row.appendChild(categoryCell);
+
+                    const quantityCell = document.createElement('td');
+                    quantityCell.textContent = item.Quantity;
+                    row.appendChild(quantityCell);
+
+                    const addToCartCell = document.createElement('td');
+                    const addToCartLink = document.createElement('a');
+                    addToCartLink.href = `@Url.Action("AddToCart", "Shop")?articleId=${item.id}`;
+                    addToCartLink.className = 'btn btn-primary';
+                    addToCartLink.innerHTML = '<i class="bi bi-cart"></i> Add to Cart';
+                    addToCartCell.appendChild(addToCartLink);
+                    row.appendChild(addToCartCell);
+
+                    articlesBody.appendChild(row);
+                });
             });
     };
 
