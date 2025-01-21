@@ -98,7 +98,7 @@
 
                     const addToCartCell = document.createElement('td');
                     const addToCartLink = document.createElement('a');
-                    addToCartLink.href = `@Url.Action("AddToCart", "Shop")?articleId=${item.id}`;
+                    addToCartLink.href = `@Url.Action("AddToCart", "Shop")?articleId=${item.Id}`;
                     addToCartLink.className = 'btn btn-primary';
                     addToCartLink.innerHTML = '<i class="bi bi-cart"></i> Add to Cart';
                     addToCartCell.appendChild(addToCartLink);

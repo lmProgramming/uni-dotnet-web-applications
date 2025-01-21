@@ -1,7 +1,6 @@
 ﻿using Identity.Data;
 using Identity.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.JsonPatch;
+using Identity.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -49,10 +48,17 @@ namespace Identity.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Categories.Add(category);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(Get), new { id = category.Id }, category);
+                return CreatedAtAction(nameof(Get), new { id = category.Id }, category);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
         }
 
         [HttpPut("{id}")]
@@ -96,22 +102,14 @@ namespace Identity.Controllers
                 return NotFound();
             }
 
-            if (category.Name == "Other")
-            {
-                return BadRequest("The 'Other' category cannot be deleted.");
-            }
-
             var articles = await _context.Articles
                 .Where(a => a.CategoryId == id)
                 .ToListAsync();
 
-            var defaultCategory = await _context.Categories.FirstOrDefaultAsync(c => c.Name == "Other");
-            if (defaultCategory == null)
-                return BadRequest("Default category 'Other' is missing.");
-
             foreach (var article in articles)
             {
-                article.CategoryId = defaultCategory.Id;
+                ImageHelper.DeleteArticleImage(article);
+                _context.Articles.Remove(article);
             }
 
             _context.Categories.Remove(category);

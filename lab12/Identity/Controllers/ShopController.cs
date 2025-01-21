@@ -4,12 +4,11 @@ using Identity.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Identity.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Builder;
 using Identity.Utilities;
-using Microsoft.AspNetCore.JsonPatch.Internal;
 
 namespace Identity.Controllers
 {
+    [Authorize(Policy = "RequireRoleForViewStore")]
     public class ShopController : Controller
     {
         private readonly ArticleDbContext _context;
@@ -117,6 +116,7 @@ namespace Identity.Controllers
         }
 
         [Authorize]
+        [Authorize(Policy = "RequireRoleForViewStore")]
         public IActionResult Order()
         {
             var cartItems = new List<OrderItem>();
@@ -170,6 +170,8 @@ namespace Identity.Controllers
         }
 
         [HttpPost]
+        [Authorize]
+        [Authorize(Policy = "RequireRoleForViewStore")]
         public async Task<IActionResult> ConfirmOrder(string fullName, string address, string paymentMethod)
         {
             var orderItems = GetOrderItems();

@@ -23,7 +23,7 @@ namespace Identity.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
+        public IActionResult Login([FromBody] LoginModel loginModel)
         {
             var user = _context.Users.FirstOrDefault(u => u.UserName == loginModel.Username);
             if (user != null)
