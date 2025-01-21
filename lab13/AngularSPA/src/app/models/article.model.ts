@@ -1,3 +1,5 @@
+import { Category } from "./category.model";
+
 export interface Article {
   id: number;
   name: string;
@@ -5,5 +7,5 @@ export interface Article {
   expirationDate: Date | null;
   quantity: number;
   imageName: string | null;
-  categoryId: number;
+  category: Category;
 }
