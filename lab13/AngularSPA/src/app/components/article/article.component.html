@@ -1,6 +1,6 @@
 <div>
-    <button>
+    <button (click)="onSelectedArticle()">
         <!-- <img [src]="imagePath + this.selectedArticle.imageName" [alt]="this.selectedArticle.name" /> -->
-        <span>{{selectedArticle.name}} {{selectedArticle.category}}</span>
+        <span>{{article?.name}} {{article?.category}}</span>
     </button>
 </div>
