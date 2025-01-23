@@ -1,3 +1,11 @@
+@if(isArticleModifyOpen){
+    <app-article-form 
+    [article]="currentArticle!" 
+    (close)="onArticleModifyCancel"
+    (save)="onArticleModifySave($event)"
+    ></app-article-form>
+}
+
 <div class="container">
     <div class="half">
         <ul>
@@ -6,7 +14,8 @@
                 <app-article 
                 [isSelected]="article.id === currentId"
                 [article]="article" 
-                (selectedId)="onSelect($event)"></app-article>
+                (selectedId)="onSelect($event)">
+                </app-article>
             </li>
             }
         </ul>
@@ -14,7 +23,10 @@
 
     <div class="half">
         @if (currentId){
-            <app-article-full [article]="articlesService.getArticle(currentId)"></app-article-full>
+            <app-article-full 
+            [article]="articlesService.getArticle(currentId)">
+            (modifyPress)="onArticleModifyStart()"
+            </app-article-full>
         }
         @else {
             <p>Click on an article to see more details</p>

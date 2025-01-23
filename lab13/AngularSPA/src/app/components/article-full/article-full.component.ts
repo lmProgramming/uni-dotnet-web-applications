@@ -4,8 +4,8 @@ import { Article } from '../../models/article.model';
 @Component({
   selector: 'app-article-full',
   imports: [],
-  templateUrl: './article.full.component.html',
-  styleUrl: './article.full.component.css'
+  templateUrl: './article-full.component.html',
+  styleUrl: './article-full.component.css'
 })
 export class ArticleFullComponent {
   article = input.required<Article>();
