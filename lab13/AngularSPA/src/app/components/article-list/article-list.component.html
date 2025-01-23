@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="half">
+        <ul>
+            @for(article of articlesService.articles; track article.id){
+            <li>
+                <app-article 
+                [isSelected]="article.id === currentId"
+                [article]="article" 
+                (selectedId)="onSelect($event)"></app-article>
+            </li>
+            }
+        </ul>
+    </div>
+
+    <div class="half">
+        @if (currentId){
+            <app-article-full [article]="articlesService.getArticle(currentId)"></app-article-full>
+        }
+        @else {
+            <p>Click on an article to see more details</p>
+        }
+    </div>
+</div>

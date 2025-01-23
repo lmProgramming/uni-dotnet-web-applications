@@ -15,5 +15,9 @@ export class ArticlesService {
     { id: 7, name: 'Chicken', category: "protein", price: 4.99, expirationDate: null, quantity: 1, imageName: null },
   ];
 
+  public getArticle(id: number): Article {
+    return this.articles.find((article) => article.id === id)!;
+  }
+
   constructor() { }
 }

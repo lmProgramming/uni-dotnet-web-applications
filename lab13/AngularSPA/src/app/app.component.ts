@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ArticleListComponent } from './components/article.list/article.list.component';
+import { ArticleListComponent } from './components/article-list/article-list.component';
 
 @Component({
   selector: 'app-root',
