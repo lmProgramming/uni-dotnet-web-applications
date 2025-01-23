@@ -1,0 +1,7 @@
+<div>
+    <button class="fixed-width" [class.active]="isSelected()" (click)="onSelectedArticle()">
+        <!-- <img [src]="imagePath + this.selectedArticle.imageName" [alt]="this.selectedArticle.name" /> -->
+        <h3>{{article().name}}</h3>
+        <p>Category: {{ article().category }}</p>
+    </button>
+</div>

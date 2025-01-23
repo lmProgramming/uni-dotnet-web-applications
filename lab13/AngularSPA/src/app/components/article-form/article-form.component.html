@@ -1,0 +1,37 @@
+<div class="backdrop">
+    <dialog open>
+        <h2>Modify article data</h2>
+        <form (ngSubmit)="onSubmit()">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" [(ngModel)]="enteredName" required/>
+            </p>
+            <p>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" [(ngModel)]="enteredPrice" step="0.01" required/>
+            </p>
+            <p>
+                <label for="expirationDate">Expiration Date:</label>
+                <input type="date" id="expirationDate" name="expirationDate" [(ngModel)]="enteredExpirationDate"/>
+            </p>
+            <p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" [(ngModel)]="enteredQuantity" required/>
+            </p>
+            <!-- <p>
+                <label for="imageName">Image Name:</label>
+                <input type="text" id="imageName" name="imageName" [(ngModel)]="enteredImageName"/>
+            </p> -->
+            <p>
+                <label for="category">Category:</label>
+                <select id="category" name="category" [(ngModel)]="enteredCategory" required>
+                    @for (category of categories(); track category){
+                        <option value="{{category}}">{{category}}</option>  
+                    }
+                </select>
+            </p>
+            <button type="button" (click)="onCancel()">Cancel</button>
+            <button type="submit">Save</button>           
+        </form>
+    </dialog>
+</div>

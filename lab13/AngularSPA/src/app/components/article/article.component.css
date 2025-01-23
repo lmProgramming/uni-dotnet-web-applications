@@ -1,0 +1,14 @@
+img{
+    height: 50px;
+    width: 50px;
+}
+
+.active{
+    background-color: greenyellow;
+}
+
+.fixed-width{
+    width: 400px;
+    margin-top: 10px;
+    padding: 0px;
+}
