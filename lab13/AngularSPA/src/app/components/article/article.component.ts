@@ -13,7 +13,7 @@ export class ArticleComponent {
   selectedId = output<number>();
   isSelected = input.required<boolean>();
   
-  imagePath = computed(() => `assets/images/${this.article().imageName}`);
+  imagePath = computed(() => `assets/images/${this.article().imageName?? "default.png"}`);
 
   onSelectedArticle(){
     this.selectedId.emit(this.article().id);

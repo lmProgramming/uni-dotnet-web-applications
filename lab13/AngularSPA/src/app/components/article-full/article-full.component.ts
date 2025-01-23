@@ -13,7 +13,7 @@ export class ArticleFullComponent {
   modifyPress = output();
   removePress = output();
 
-  imagePath = computed(() => "assets/images/" + this.article().imageName);
+  imagePath = computed(() => `assets/images/${this.article().imageName?? "default.png"}`);
 
   onModify(){
     this.modifyPress.emit();

@@ -37,5 +37,9 @@ export class ArticlesService {
     this.articles = this.articles.filter(article => article.id !== id);
   }
 
+  getNextId(): number {
+    return Math.max(...this.articles.map((article: Article) => article.id)) + 1;
+  }
+
   constructor() { }
 }

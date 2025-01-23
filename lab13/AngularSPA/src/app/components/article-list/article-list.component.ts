@@ -16,6 +16,7 @@ export class ArticleListComponent {
   public currentId?: number;
   public currentArticle?: Article;
   isArticleModifyOpen = false;
+  creatingNewArticle = false;
 
   onSelect(id : number) {
     this.currentId = id;
@@ -23,12 +24,11 @@ export class ArticleListComponent {
   }
 
   onArticleModifyStart() {
+    this.creatingNewArticle = false;
     this.isArticleModifyOpen = true;
-    console.log("Modify article");
   }
 
   onArticleModifyCancel() {
-    console.log("Cancel modify article");
     this.isArticleModifyOpen = false;
   }
 
@@ -39,20 +39,33 @@ export class ArticleListComponent {
   }
 
   onArticleAdd() {
-    this.isArticleModifyOpen = true;
-    
+    this.creatingNewArticle = true;
+    this.currentArticle = { id: this.articlesService.getNextId(), name: '', category: 'fruit', price: 0, expirationDate: new Date(), quantity: 0, imageName: '' };
+    this.isArticleModifyOpen = true;    
   }
 
   onArticleModifySave(modifyData: ArticleDto)
   {
     this.isArticleModifyOpen = false;
-    var article = this.articlesService.getArticle(this.currentId!)
+
+    var article: Article;
+    if (this.creatingNewArticle) {
+      article = { id: this.articlesService.getNextId(), name: '', category: "fruit", price: 0, expirationDate: null, quantity: 0, imageName: null };
+    } else {
+      article = this.articlesService.getArticle(this.currentId!);
+    }
+    
     article.name = modifyData.name;
     article.category = modifyData.category;
     article.price = modifyData.price;
     article.expirationDate = modifyData.expirationDate;
     article.quantity = modifyData.quantity;
-    article.imageName = modifyData.imageName;
+    article.imageName = modifyData.imageName == "" ? null : modifyData.imageName;
+
+    if (this.creatingNewArticle) {
+      this.articlesService.addArticle(article);
+      this.currentId = article.id;
+    }
 
     this.currentArticle = this.articlesService.getArticle(this.currentId!);
   }

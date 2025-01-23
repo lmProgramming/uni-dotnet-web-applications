@@ -1,7 +1,7 @@
 import { Component, OnInit, input, output, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Article, ArticleDto } from '../../models/article.model';
-import { CATEGORIES_LIST } from '../../models/category.model';
+import { Category, CATEGORIES_LIST } from '../../models/category.model';
 
 @Component({
   selector: 'app-article-form',
@@ -19,15 +19,15 @@ export class ArticleFormComponent implements OnInit {
   enteredExpirationDate = signal<Date | null>(null);
   enteredQuantity = signal(0);
   enteredImageName = signal("");
-  enteredCategory = signal("");
-  categories = CATEGORIES_LIST;
+  enteredCategory = signal<Category>("fruit");
+  categories: Category[] = CATEGORIES_LIST;
 
   ngOnInit() {
       this.enteredName.set(this.article().name);
       this.enteredPrice.set(this.article().price);
       this.enteredExpirationDate.set(this.article().expirationDate);
       this.enteredQuantity.set(this.article().quantity);
-      this.enteredImageName.set(this.article().imageName?? "default.png");
+      this.enteredImageName.set(this.article().imageName?? "");
       this.enteredCategory.set(this.article().category);
   }
 
@@ -46,5 +46,5 @@ export class ArticleFormComponent implements OnInit {
     });
   }
 
-  imagePath = computed(()=> "assets/images/" + this.article().imageName);
+  // imagePath = computed(() => `assets/images/${this.article().imageName?? "default.png"}`);
 }
