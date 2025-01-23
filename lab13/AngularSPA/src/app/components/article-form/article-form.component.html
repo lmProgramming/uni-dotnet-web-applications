@@ -25,8 +25,10 @@
             <p>
                 <label for="category">Category:</label>
                 <select id="category" name="category" [(ngModel)]="enteredCategory" required>
-                    <option *ngFor="let category of categories" [value]="category">{{category}}</option>
-                  </select>
+                    @for (category of categories(); track category){
+                        <option value="{{category}}">{{category}}</option>  
+                    }
+                </select>
             </p>
             <button type="button" (click)="onCancel()">Cancel</button>
             <button type="submit">Save</button>           
