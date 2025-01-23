@@ -20,15 +20,16 @@ export class ArticleFormComponent implements OnInit {
   enteredQuantity = signal(0);
   enteredImageName = signal("");
   enteredCategory = signal<Category>("fruit");
-  categories: Category[] = CATEGORIES_LIST;
+  public categories = signal<Category[]>([]);
 
   ngOnInit() {
-      this.enteredName.set(this.article().name);
-      this.enteredPrice.set(this.article().price);
-      this.enteredExpirationDate.set(this.article().expirationDate);
-      this.enteredQuantity.set(this.article().quantity);
-      this.enteredImageName.set(this.article().imageName?? "");
-      this.enteredCategory.set(this.article().category);
+    this.categories.set(CATEGORIES_LIST);
+    this.enteredName.set(this.article().name);
+    this.enteredPrice.set(this.article().price);
+    this.enteredExpirationDate.set(this.article().expirationDate);
+    this.enteredQuantity.set(this.article().quantity);
+    this.enteredImageName.set(this.article().imageName?? "");
+    this.enteredCategory.set(this.article().category);
   }
 
   onCancel(){
@@ -36,6 +37,11 @@ export class ArticleFormComponent implements OnInit {
   }
 
   onSubmit(){
+    if (this.enteredName() === "" || this.enteredPrice() <= 0 || this.enteredQuantity() <= 0) {
+      alert("Please fill all fields correctly");
+      return;
+    }
+
     this.save.emit({
       name: this.enteredName(),
       price: this.enteredPrice(),
