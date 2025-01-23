@@ -1,4 +1,4 @@
-import { Component, inject, Input, signal } from '@angular/core';
+import { Component, inject, input, signal, computed, output } from '@angular/core';
 import { ArticlesService } from '../../services/articles.service';
 import { Article } from '../../models/article.model';
 
@@ -9,9 +9,13 @@ import { Article } from '../../models/article.model';
   styleUrl: './article.component.css'
 })
 export class ArticleComponent {
-  @Input({required:true}) article?: Article;
+  article = input.required<Article>();
+  selectedId = output<number>();
+  isSelected = input.required<boolean>();
   
-  imagePath = () => `assets/images/${this.article?.imageName}`;
+  imagePath = computed(() => `assets/images/${this.article().imageName}`);
 
-  onSelectedArticle(){};
+  onSelectedArticle(){
+    this.selectedId.emit(this.article().id);
+  };
 }

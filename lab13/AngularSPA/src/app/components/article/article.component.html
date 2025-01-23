@@ -1,6 +1,6 @@
 <div>
-    <button (click)="onSelectedArticle()">
+    <button [class.active]="isSelected()" (click)="onSelectedArticle()">
         <!-- <img [src]="imagePath + this.selectedArticle.imageName" [alt]="this.selectedArticle.name" /> -->
-        <span>{{article?.name}} {{article?.category}}</span>
+        <span>{{article().name}} {{article().category}}</span>
     </button>
 </div>

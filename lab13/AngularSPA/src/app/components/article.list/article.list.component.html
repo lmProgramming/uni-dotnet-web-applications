@@ -1,5 +1,10 @@
 <ul>
+    @for(article of articlesService.articles; track article.id){
     <li>
-        <app-article [article]="articlesService.articles[0]"></app-article>
+        <app-article 
+        [isSelected]="article.id === currentId"
+        [article]="article" 
+        (selectedId)="onSelect($event)"></app-article>
     </li>
+    }
 </ul>
