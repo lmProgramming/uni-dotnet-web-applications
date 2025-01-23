@@ -2,7 +2,7 @@ import { Component, inject, Input, signal } from '@angular/core';
 import { ArticlesService } from '../../services/articles.service';
 import { ArticleComponent } from '../article/article.component';
 import { ArticleFullComponent } from '../article-full/article-full.component';
-import { Article } from '../../models/article.model';
+import { Article, ArticleDto } from '../../models/article.model';
 import { ArticleFormComponent } from '../article-form/article-form.component';
 
 @Component({
@@ -19,7 +19,7 @@ export class ArticleListComponent {
 
   onSelect(id : number) {
     this.currentId = id;
-    this.currentArticle = this.articlesService.articles.find((article)=>article.id === id);
+    this.currentArticle = this.articlesService.getArticle(id);
   }
 
   onArticleModifyStart() {
@@ -28,14 +28,31 @@ export class ArticleListComponent {
   }
 
   onArticleModifyCancel() {
+    console.log("Cancel modify article");
     this.isArticleModifyOpen = false;
   }
 
-  onArticleModifySave(modifyData: {name: string})
+  onArticleRemove() {
+    this.articlesService.removeArticle(this.currentId!);
+    this.currentId = undefined;
+    this.currentArticle
+  }
+
+  onArticleAdd() {
+    this.isArticleModifyOpen = true;
+    
+  }
+
+  onArticleModifySave(modifyData: ArticleDto)
   {
     this.isArticleModifyOpen = false;
     var article = this.articlesService.getArticle(this.currentId!)
     article.name = modifyData.name;
+    article.category = modifyData.category;
+    article.price = modifyData.price;
+    article.expirationDate = modifyData.expirationDate;
+    article.quantity = modifyData.quantity;
+    article.imageName = modifyData.imageName;
 
     this.currentArticle = this.articlesService.getArticle(this.currentId!);
   }

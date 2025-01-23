@@ -9,3 +9,5 @@ export interface Article {
   imageName: string | null;
   category: Category;
 }
+
+export type ArticleDto = {name: string, price: number, expirationDate: Date | null, quantity: number, imageName: string, category: Category}; 

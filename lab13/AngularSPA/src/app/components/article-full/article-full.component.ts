@@ -11,10 +11,15 @@ export class ArticleFullComponent {
   article = input.required<Article>();
 
   modifyPress = output();
+  removePress = output();
 
   imagePath = computed(() => "assets/images/" + this.article().imageName);
 
   onModify(){
     this.modifyPress.emit();
+  }
+
+  onRemove() {
+    this.removePress.emit();
   }
 }

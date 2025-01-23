@@ -1,15 +1,17 @@
 @if(isArticleModifyOpen){
     <app-article-form 
     [article]="currentArticle!" 
-    (close)="onArticleModifyCancel"
+    (close)="onArticleModifyCancel()"
     (save)="onArticleModifySave($event)"
-    ></app-article-form>
+    (cancel)="onArticleModifyCancel()">
+    </app-article-form>
 }
 
 <div class="container">
     <div class="half">
+        <button type="button" class="button-normal" (click)="onArticleAdd()">Add Article</button>
         <ul>
-            @for(article of articlesService.articles; track article.id){
+            @for(article of articlesService.getArticles(); track article.id){
             <li>
                 <app-article 
                 [isSelected]="article.id === currentId"
@@ -24,8 +26,9 @@
     <div class="half">
         @if (currentId){
             <app-article-full 
-            [article]="articlesService.getArticle(currentId)">
+            [article]="articlesService.getArticle(currentId)"
             (modifyPress)="onArticleModifyStart()"
+            (removePress)="onArticleRemove()">
             </app-article-full>
         }
         @else {
